@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Photography 305 · Miami Real Estate Media</title>
+<meta name="description" content="Premium real estate photography, cinematic drone video, and 3D tours for South Florida's top agents and developers. 48-hour delivery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink-900:#0a0a0a; --ink-800:#121212; --ink-700:#1a1a1a; --ink-600:#242424; --ink-500:#2d2d2d; --ink-400:#3a3a3a;
+  --silver-100:#fafafa; --silver-200:#f1f1f1; --silver-300:#d4d4d4; --silver-400:#909090; --silver-500:#6e6e6e; --silver-600:#4a4a4a;
+  --accent:#ffffff; --brand-navy:#1a2744;
+  --success:#34d399; --warn:#fbbf24; --danger:#ef4444;
+  --font-display:'Space Grotesk',sans-serif; --font-body:'Inter',sans-serif;
+  --fs-display-xxl:clamp(3.5rem,9vw,8rem); --fs-display-lg:clamp(2rem,4.5vw,3.5rem);
+  --fs-heading-xl:clamp(1.5rem,3vw,2.25rem); --fs-heading-lg:1.25rem;
+  --fs-body-lg:1.0625rem; --fs-body:0.9375rem; --fs-body-sm:0.8125rem; --fs-label:0.6875rem;
+  --sp-sm:clamp(0.75rem,1.5vw,1rem); --sp-md:clamp(1rem,2vw,1.5rem); --sp-lg:clamp(1.5rem,3vw,2.5rem);
+  --sp-xl:clamp(2.5rem,5vw,4rem); --sp-xxl:clamp(4rem,8vw,7rem);
+  --max-w:1440px; --gutter:clamp(1.25rem,3vw,3rem);
+  --r-md:4px;
+  --ease:cubic-bezier(0.22,1,0.36,1); --dur-fast:180ms; --dur:320ms;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);background:var(--ink-900);color:var(--silver-200);font-size:var(--fs-body);line-height:1.6;overflow-x:hidden;letter-spacing:-0.005em}
+::selection{background:var(--accent);color:var(--ink-900)}
+.hidden{display:none!important}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 var(--gutter);height:72px;background:rgba(10,10,10,0.72);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(255,255,255,0.04);transition:all var(--dur) var(--ease)}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.nav-cam{width:30px;height:24px;transition:transform var(--dur) var(--ease)}
+.nav-logo:hover .nav-cam{transform:scale(1.08)}
+.nav-brand{display:flex;flex-direction:column;line-height:1}
+.nav-name{font-family:var(--font-display);font-size:0.875rem;font-weight:500;color:var(--silver-100);letter-spacing:0.02em}
+.nav-sub{font-size:0.625rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--silver-500);margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:2.25rem;list-style:none}
+.nav-links a{font-size:0.8125rem;color:var(--silver-400);text-decoration:none;letter-spacing:0.02em;transition:color var(--dur-fast) var(--ease);position:relative;padding:4px 0}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--accent);transition:width var(--dur) var(--ease)}
+.nav-links a:hover{color:var(--silver-100)}
+.nav-links a:hover::after{width:100%}
+.nav-book{background:var(--silver-100);color:var(--ink-900)!important;padding:11px 22px;border-radius:999px;font-weight:500!important;transition:all var(--dur) var(--ease)!important}
+.nav-book::after{display:none!important}
+.nav-book:hover{background:var(--accent);transform:translateY(-1px)}
+.menu-toggle{display:none;background:none;border:none;color:var(--silver-100);cursor:pointer;padding:8px}
+
+.hero{min-height:100vh;position:relative;display:grid;grid-template-rows:1fr auto;padding-top:72px;overflow:hidden;background:var(--ink-900)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 30%,rgba(26,39,68,0.5) 0%,transparent 70%),radial-gradient(ellipse 60% 80% at 80% 80%,rgba(36,52,89,0.3) 0%,transparent 60%),linear-gradient(180deg,#0a0a0a 0%,#0d1020 50%,#0a0a0a 100%)}
+.hero-grain{position:absolute;inset:0;opacity:0.4;mix-blend-mode:overlay;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:48px 48px}
+.hero-inner{position:relative;max-width:var(--max-w);margin:0 auto;padding:var(--sp-xxl) var(--gutter) var(--sp-xl);width:100%;display:grid;grid-template-columns:1fr;gap:var(--sp-xl);align-content:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:var(--fs-label);font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--silver-400);animation:fadeUp 0.8s var(--ease) 0.1s both}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--silver-400)}
+.hero-dot{width:8px;height:8px;border-radius:50%;background:var(--silver-100);box-shadow:0 0 12px rgba(255,255,255,0.6);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.85)}}
+.hero h1{font-family:var(--font-display);font-size:var(--fs-display-xxl);font-weight:500;line-height:0.95;letter-spacing:-0.035em;color:var(--silver-100);max-width:15ch;animation:fadeUp 0.9s var(--ease) 0.2s both}
+.hero h1 .italic{font-style:italic;font-weight:300;color:var(--silver-300)}
+.hero-meta{display:flex;gap:var(--sp-xl);align-items:flex-start;max-width:640px;animation:fadeUp 0.9s var(--ease) 0.35s both}
+.hero-p{font-size:var(--fs-body-lg);font-weight:300;color:var(--silver-300);line-height:1.6;max-width:38ch}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;animation:fadeUp 0.9s var(--ease) 0.5s both}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:999px;font-family:var(--font-body);font-size:0.875rem;font-weight:500;cursor:pointer;border:none;transition:all var(--dur) var(--ease);text-decoration:none;white-space:nowrap}
+.btn-primary{background:var(--silver-100);color:var(--ink-900)}
+.btn-primary:hover{background:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,255,255,0.12)}
+.btn-ghost{background:transparent;color:var(--silver-100);border:1px solid rgba(255,255,255,0.2)}
+.btn-ghost:hover{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.4);transform:translateY(-2px)}
+.btn-arrow{width:24px;height:24px;border-radius:50%;background:var(--ink-900);display:inline-flex;align-items:center;justify-content:center;color:var(--silver-100);font-size:13px;transition:transform var(--dur) var(--ease)}
+.btn-primary:hover .btn-arrow{transform:translateX(2px)}
+.btn-ghost .btn-arrow{background:var(--silver-100);color:var(--ink-900)}
+.hero-footer{position:relative;border-top:1px solid rgba(255,255,255,0.06);display:grid;grid-template-columns:repeat(4,1fr);animation:fadeUp 1s var(--ease) 0.7s both}
+.hero-stat{padding:var(--sp-md) var(--gutter);border-right:1px solid rgba(255,255,255,0.06);display:flex;flex-direction:column;gap:4px;transition:background var(--dur) var(--ease)}
+.hero-stat:last-child{border-right:none}
+.hero-stat:hover{background:rgba(255,255,255,0.02)}
+.stat-value{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.25rem);font-weight:500;color:var(--silver-100);line-height:1;letter-spacing:-0.03em}
+.stat-label{font-size:var(--fs-label);letter-spacing:0.15em;text-transform:uppercase;color:var(--silver-500)}
+
+.trust{background:var(--ink-800);padding:var(--sp-md) var(--gutter);border-top:1px solid rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.04)}
+.trust-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:var(--sp-lg);flex-wrap:wrap}
+.trust-label{font-size:var(--fs-label);letter-spacing:0.22em;text-transform:uppercase;color:var(--silver-500)}
+.trust-line{flex:1;height:1px;background:rgba(255,255,255,0.06);min-width:20px}
+.trust-brands{display:flex;gap:var(--sp-lg);align-items:center;flex-wrap:wrap}
+.trust-brand{font-family:var(--font-display);font-size:0.875rem;font-weight:500;color:var(--silver-500);transition:color var(--dur) var(--ease)}
+.trust-brand:hover{color:var(--silver-200)}
+
+.section{max-width:var(--max-w);margin:0 auto;padding:var(--sp-xxl) var(--gutter)}
+.section-full{padding:var(--sp-xxl) 0}
+.section-header{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-lg);align-items:end;margin-bottom:var(--sp-xl)}
+.eyebrow{font-size:var(--fs-label);font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--silver-500);margin-bottom:var(--sp-sm);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';width:24px;height:1px;background:var(--silver-500)}
+h2.display{font-family:var(--font-display);font-size:var(--fs-display-lg);font-weight:500;line-height:1.05;letter-spacing:-0.03em;color:var(--silver-100)}
+h2.display .italic{font-style:italic;font-weight:300;color:var(--silver-400)}
+.header-right{font-size:var(--fs-body-lg);font-weight:300;color:var(--silver-400);line-height:1.65;max-width:40ch;justify-self:end}
+
+/* SERVICE/PACKAGE CARDS (selectable) */
+.services-grid,.pkg-grid{display:grid;gap:1px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.05)}
+.services-grid{grid-template-columns:repeat(3,1fr)}
+.pkg-grid{grid-template-columns:repeat(4,1fr);margin-top:var(--sp-xl)}
+.packages-section{background:var(--ink-800);padding:var(--sp-xxl) 0}
+.svc,.pkg{background:var(--ink-800);padding:var(--sp-lg);cursor:pointer;position:relative;transition:background var(--dur) var(--ease);min-height:280px;display:flex;flex-direction:column;justify-content:space-between}
+.pkg{background:var(--ink-900)}
+.svc:hover{background:var(--ink-700)}
+.pkg:hover{background:var(--ink-700)}
+.svc.selected,.pkg.selected{background:var(--ink-700);box-shadow:inset 0 0 0 1px var(--silver-100)}
+.pkg.featured{background:var(--ink-700)}
+.pkg.featured::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--silver-100)}
+.svc-top,.pkg-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:var(--sp-md)}
+.svc-num,.pkg-tag{font-family:var(--font-display);font-size:0.75rem;color:var(--silver-500);letter-spacing:0.2em;text-transform:uppercase}
+.pkg.featured .pkg-tag{color:var(--silver-100)}
+.item-check{width:22px;height:22px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;transition:all var(--dur) var(--ease)}
+.svc.selected .item-check,.pkg.selected .item-check{background:var(--silver-100);color:var(--ink-900);border-color:var(--silver-100)}
+.svc-title,.pkg-name{font-family:var(--font-display);font-size:var(--fs-heading-xl);font-weight:500;color:var(--silver-100);line-height:1.15;letter-spacing:-0.02em;margin-bottom:var(--sp-sm)}
+.svc-desc{font-size:var(--fs-body);color:var(--silver-400);line-height:1.6;margin-bottom:var(--sp-md);font-weight:300}
+.svc-bottom,.pkg-price-row{padding-top:var(--sp-md);border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between}
+.pkg-price-row{padding:var(--sp-md) 0;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:var(--sp-md)}
+.svc-price,.pkg-price{font-family:var(--font-display);font-size:1.5rem;font-weight:500;color:var(--silver-100);letter-spacing:-0.02em}
+.pkg-price{font-size:2.75rem;letter-spacing:-0.04em;line-height:1}
+.svc-price sup,.pkg-price sup{font-size:0.75rem;font-weight:400;color:var(--silver-400)}
+.pkg-list{list-style:none;margin-bottom:var(--sp-md);flex:1}
+.pkg-list li{font-size:var(--fs-body-sm);font-weight:300;color:var(--silver-400);padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;gap:10px}
+.pkg-list li::before{content:'';width:12px;height:1px;background:var(--silver-500);margin-top:10px;flex-shrink:0}
+.pkg-list li:last-child{border:none}
+
+/* CART BAR */
+.cart-bar{display:none;margin-top:var(--sp-md);padding:var(--sp-md) var(--sp-lg);background:var(--silver-100);color:var(--ink-900);border-radius:999px;align-items:center;justify-content:space-between;gap:var(--sp-md);flex-wrap:wrap}
+.cart-info{display:flex;align-items:center;gap:var(--sp-md);flex-wrap:wrap}
+.cart-count{background:var(--ink-900);color:var(--silver-100);min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:600;padding:0 8px}
+.cart-items-text{font-size:var(--fs-body-sm);color:var(--ink-600)}
+.cart-total{font-family:var(--font-display);font-size:1.25rem;font-weight:500;color:var(--ink-900);letter-spacing:-0.02em}
+.btn-book{background:var(--ink-900);color:var(--silver-100);padding:10px 22px;border-radius:999px;font-size:0.8125rem;font-weight:500;border:none;cursor:pointer;transition:all var(--dur) var(--ease);display:inline-flex;align-items:center;gap:8px}
+.btn-book:hover{background:var(--ink-700);transform:translateY(-1px)}
+
+/* MOSAIC */
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:180px;gap:2px}
+.m-item{position:relative;overflow:hidden;cursor:pointer;background:var(--ink-700)}
+.m-item.big{grid-column:span 7;grid-row:span 2}
+.m-item.med{grid-column:span 5;grid-row:span 2}
+.m-item.sm{grid-column:span 4;grid-row:span 1}
+.m-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,0.9) 0%,rgba(10,10,10,0.1) 40%,transparent 70%);opacity:0.7;transition:opacity var(--dur) var(--ease);pointer-events:none}
+.m-item:hover::after{opacity:0.95}
+.m-bg{width:100%;height:100%;display:flex;align-items:center;justify-content:center;transition:transform 600ms var(--ease)}
+.m-item:hover .m-bg{transform:scale(1.05)}
+.m-bg-1{background:linear-gradient(135deg,#2a3450 0%,#1a2744 50%,#0d1220 100%)}
+.m-bg-2{background:linear-gradient(135deg,#1c2233 0%,#2a3450 100%)}
+.m-bg-3{background:linear-gradient(135deg,#243459 0%,#121212 100%)}
+.m-bg-4{background:linear-gradient(160deg,#0d1220 0%,#243459 100%)}
+.m-bg-5{background:linear-gradient(135deg,#1a2744 0%,#0a0a0a 100%)}
+.m-icon{opacity:0.15;filter:blur(1px)}
+.m-info{position:absolute;bottom:0;left:0;right:0;padding:var(--sp-md) var(--sp-lg);z-index:2;transform:translateY(8px);opacity:0;transition:all var(--dur) var(--ease)}
+.m-item:hover .m-info{transform:translateY(0);opacity:1}
+.m-tag{font-size:var(--fs-label);letter-spacing:0.18em;text-transform:uppercase;color:var(--silver-400);margin-bottom:6px;font-weight:500}
+.m-loc{font-family:var(--font-display);font-size:1rem;font-weight:500;color:var(--silver-100);letter-spacing:-0.01em}
+
+/* PROCESS */
+.process-section{background:var(--ink-900)}
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.05);margin-top:var(--sp-xl)}
+.step{background:var(--ink-800);padding:var(--sp-xl);transition:background var(--dur) var(--ease)}
+.step:hover{background:var(--ink-700)}
+.step-num{font-family:var(--font-display);font-size:clamp(3rem,5vw,4.5rem);font-weight:300;color:var(--silver-600);letter-spacing:-0.04em;line-height:1;margin-bottom:var(--sp-md);display:flex;align-items:baseline;gap:12px}
+.step-num-label{font-size:var(--fs-label);letter-spacing:0.22em;text-transform:uppercase;color:var(--silver-500);font-weight:500;font-family:var(--font-body)}
+.step-title{font-family:var(--font-display);font-size:var(--fs-heading-xl);font-weight:500;color:var(--silver-100);letter-spacing:-0.02em;margin-bottom:var(--sp-sm)}
+.step-desc{font-size:var(--fs-body);color:var(--silver-400);line-height:1.7;font-weight:300}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-md);margin-top:var(--sp-xl)}
+.testi{background:var(--ink-800);padding:var(--sp-lg);border:1px solid rgba(255,255,255,0.05);border-radius:var(--r-md);transition:all var(--dur) var(--ease);display:flex;flex-direction:column;gap:var(--sp-md)}
+.testi:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-2px)}
+.testi-stars{display:flex;gap:3px;color:var(--silver-100)}
+.testi-quote{font-family:var(--font-display);font-size:1rem;color:var(--silver-200);line-height:1.55;letter-spacing:-0.01em;flex:1}
+.testi-author{display:flex;align-items:center;gap:12px;padding-top:var(--sp-sm);border-top:1px solid rgba(255,255,255,0.05)}
+.testi-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--brand-navy) 0%,var(--ink-500) 100%);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:0.875rem;color:var(--silver-100)}
+.testi-name{font-size:var(--fs-body-sm);font-weight:500;color:var(--silver-100)}
+.testi-role{font-size:0.75rem;color:var(--silver-500)}
+
+/* BOOKING */
+.booking-section{background:var(--ink-800);padding:var(--sp-xxl) 0}
+.booking-layout{display:grid;grid-template-columns:1.05fr 0.95fr;gap:var(--sp-xl);margin-top:var(--sp-xl);align-items:start}
+.cal-container{background:var(--ink-900);border:1px solid rgba(255,255,255,0.06);border-radius:var(--r-md);padding:var(--sp-lg)}
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-md)}
+.cal-month{font-family:var(--font-display);font-size:var(--fs-heading-lg);font-weight:500;color:var(--silver-100);letter-spacing:-0.01em}
+.cal-nav{display:flex;gap:6px}
+.cal-nav button{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:var(--silver-300);cursor:pointer;font-size:14px;transition:all var(--dur-fast) var(--ease);display:inline-flex;align-items:center;justify-content:center}
+.cal-nav button:hover{background:var(--silver-100);color:var(--ink-900)}
+.cal-dow{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:6px}
+.cal-dow-cell{text-align:center;font-size:0.6875rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--silver-500);padding:8px 0}
+.cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.cal-cell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:0.8125rem;border-radius:2px;cursor:pointer;color:var(--silver-500);transition:all var(--dur-fast) var(--ease)}
+.cal-cell.avail{color:var(--silver-100)}
+.cal-cell.avail:hover{background:rgba(255,255,255,0.06);transform:scale(1.05)}
+.cal-cell.sel{background:var(--silver-100);color:var(--ink-900);font-weight:600}
+.cal-cell.booked{color:var(--silver-600);cursor:not-allowed;text-decoration:line-through}
+.cal-cell.empty{cursor:default}
+.cal-cell.today{box-shadow:inset 0 0 0 1px rgba(255,255,255,0.3)}
+.cal-legend{display:flex;gap:var(--sp-md);margin-top:var(--sp-md);flex-wrap:wrap;padding-top:var(--sp-md);border-top:1px solid rgba(255,255,255,0.05)}
+.leg{display:flex;align-items:center;gap:6px;font-size:0.6875rem;color:var(--silver-500)}
+.leg-dot{width:8px;height:8px;border-radius:50%}
+.time-wrap{margin-top:var(--sp-md);display:none}
+.time-wrap.show{display:block}
+.time-head{font-size:var(--fs-label);letter-spacing:0.18em;text-transform:uppercase;color:var(--silver-400);margin-bottom:var(--sp-md);font-weight:500}
+.time-head span{color:var(--silver-100)}
+.time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.t-slot{padding:12px 8px;text-align:center;border-radius:999px;border:1px solid rgba(255,255,255,0.1);font-size:var(--fs-body-sm);cursor:pointer;color:var(--silver-300);transition:all var(--dur-fast) var(--ease)}
+.t-slot:hover{border-color:var(--silver-100);color:var(--silver-100)}
+.t-slot.sel{background:var(--silver-100);color:var(--ink-900);border-color:var(--silver-100);font-weight:500}
+.t-slot.off{color:var(--silver-600);border-style:dashed;cursor:not-allowed;pointer-events:none}
+
+/* FORM */
+.bk-form{display:flex;flex-direction:column;gap:var(--sp-md)}
+.fl{font-size:var(--fs-label);font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--silver-500);margin-bottom:8px;display:block}
+.fi,.fs,.ft{width:100%;padding:14px 18px;background:var(--ink-900);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r-md);font-size:var(--fs-body);font-family:var(--font-body);color:var(--silver-100);transition:all var(--dur-fast) var(--ease)}
+.fi:focus,.fs:focus,.ft:focus{outline:none;border-color:var(--silver-100);background:var(--ink-800)}
+.fi::placeholder{color:var(--silver-600)}
+.ft{min-height:90px;resize:vertical}
+.bk-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-md)}
+.travel-note{font-size:var(--fs-body-sm);color:var(--silver-400);padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:var(--r-md);font-style:italic}
+
+/* PROMO */
+.promo-row{display:grid;grid-template-columns:1fr auto;gap:8px}
+.promo-row .fi{padding:12px 16px}
+.btn-apply{padding:12px 20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);color:var(--silver-100);border-radius:var(--r-md);font-size:0.8125rem;font-weight:500;cursor:pointer;font-family:var(--font-body);transition:all var(--dur) var(--ease)}
+.btn-apply:hover{background:var(--silver-100);color:var(--ink-900);border-color:var(--silver-100)}
+.promo-status{margin-top:8px;font-size:0.75rem;padding:10px 14px;border-radius:var(--r-md);display:none}
+.promo-status.ok{display:block;background:rgba(52,211,153,0.08);color:var(--success);border:1px solid rgba(52,211,153,0.2)}
+.promo-status.err{display:block;background:rgba(239,68,68,0.08);color:var(--danger);border:1px solid rgba(239,68,68,0.2)}
+
+/* ORDER SUMMARY */
+.order-box{background:var(--ink-900);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r-md);padding:var(--sp-md);display:none}
+.order-box.show{display:block}
+.ord-line{display:flex;justify-content:space-between;font-size:var(--fs-body-sm);color:var(--silver-300);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.ord-line:last-of-type{border:none}
+.ord-line span:first-child{color:var(--silver-400)}
+.ord-discount{color:var(--success)!important;display:flex;justify-content:space-between;font-size:var(--fs-body-sm);padding:6px 0}
+.ord-total{display:flex;justify-content:space-between;align-items:baseline;padding-top:var(--sp-sm);margin-top:var(--sp-sm);border-top:1px solid rgba(255,255,255,0.08)}
+.ord-total-label{font-size:var(--fs-label);letter-spacing:0.18em;text-transform:uppercase;color:var(--silver-500);font-weight:500}
+.ord-total-val{font-family:var(--font-display);font-size:1.5rem;font-weight:500;color:var(--silver-100);letter-spacing:-0.02em}
+
+.consent-box{display:flex;gap:10px;align-items:flex-start;padding:var(--sp-sm) 0;font-size:0.75rem;color:var(--silver-500);line-height:1.5}
+.consent-box input{margin-top:3px;accent-color:var(--silver-100);cursor:pointer;flex-shrink:0}
+.consent-box a{color:var(--silver-300);text-decoration:underline;cursor:pointer}
+.consent-box a:hover{color:var(--silver-100)}
+
+.btn-submit{width:100%;padding:16px 28px;background:var(--silver-100);color:var(--ink-900);border:none;border-radius:999px;font-size:var(--fs-body);font-weight:500;font-family:var(--font-body);cursor:pointer;transition:all var(--dur) var(--ease);display:inline-flex;align-items:center;justify-content:center;gap:10px}
+.btn-submit:hover{background:var(--accent);transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,255,255,0.12)}
+.btn-submit:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+.btn-submit-arrow{width:22px;height:22px;border-radius:50%;background:var(--ink-900);color:var(--silver-100);display:inline-flex;align-items:center;justify-content:center;font-size:11px}
+.fine{font-size:0.6875rem;color:var(--silver-500);text-align:center;margin-top:var(--sp-sm);letter-spacing:0.08em}
+
+.success-card{background:var(--ink-900);border:1px solid rgba(52,211,153,0.2);border-radius:var(--r-md);padding:var(--sp-xl);text-align:center;display:none}
+.success-card.show{display:block}
+.success-icon{width:60px;height:60px;border-radius:50%;background:rgba(52,211,153,0.1);color:var(--success);display:inline-flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:var(--sp-md)}
+.success-title{font-family:var(--font-display);font-size:var(--fs-heading-xl);font-weight:500;color:var(--silver-100);margin-bottom:var(--sp-sm);letter-spacing:-0.02em}
+.success-body{font-size:var(--fs-body);color:var(--silver-400);line-height:1.7;margin-bottom:var(--sp-lg);font-weight:300}
+.success-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-cal{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);color:var(--silver-100);border-radius:999px;font-size:0.8125rem;font-weight:500;text-decoration:none;transition:all var(--dur) var(--ease);cursor:pointer;font-family:var(--font-body)}
+.btn-cal:hover{background:var(--silver-100);color:var(--ink-900);border-color:var(--silver-100)}
+
+/* ABOUT */
+.about-section{background:var(--ink-900);padding:var(--sp-xxl) 0}
+.about-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:0.8fr 1.2fr;gap:var(--sp-xl);align-items:center}
+.about-photo{position:relative;border-radius:var(--r-md);overflow:hidden;background:linear-gradient(160deg,var(--brand-navy) 0%,var(--ink-500) 60%,var(--ink-700) 100%);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center}
+.about-placeholder{text-align:center;z-index:1}
+.about-placeholder p{color:var(--silver-500);font-size:0.6875rem;letter-spacing:0.2em;text-transform:uppercase;margin-top:var(--sp-md)}
+.about-badge{position:absolute;bottom:var(--sp-md);left:var(--sp-md);background:rgba(10,10,10,0.6);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);padding:10px 14px;border-radius:999px;font-size:var(--fs-label);letter-spacing:0.15em;text-transform:uppercase;color:var(--silver-200);font-weight:500}
+.about-name{font-family:var(--font-display);font-size:var(--fs-display-lg);font-weight:500;color:var(--silver-100);line-height:1.05;letter-spacing:-0.03em;margin-bottom:var(--sp-md)}
+.about-name .italic{font-style:italic;font-weight:300;color:var(--silver-400)}
+.about-bio{font-size:var(--fs-body-lg);color:var(--silver-300);line-height:1.7;margin-bottom:var(--sp-md);font-weight:300}
+.about-creds{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-md);margin-top:var(--sp-lg);padding-top:var(--sp-lg);border-top:1px solid rgba(255,255,255,0.06)}
+.cred-num{font-family:var(--font-display);font-size:2rem;font-weight:500;color:var(--silver-100);letter-spacing:-0.03em;display:block}
+.cred-lbl{font-size:var(--fs-label);letter-spacing:0.15em;text-transform:uppercase;color:var(--silver-500);margin-top:8px}
+
+/* OVERLAYS (admin, legal) */
+.overlay{position:fixed;inset:0;background:rgba(10,10,10,0.98);backdrop-filter:blur(12px);z-index:9998;overflow-y:auto;display:none}
+.overlay.show{display:block}
+.overlay-wrap{max-width:1200px;margin:0 auto;padding:var(--sp-xl) var(--gutter)}
+.overlay-topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-xl);padding-bottom:var(--sp-md);border-bottom:1px solid rgba(255,255,255,0.06)}
+.overlay-title{font-family:var(--font-display);font-size:var(--fs-heading-xl);font-weight:500;color:var(--silver-100);letter-spacing:-0.02em}
+.overlay-close{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--silver-300);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:16px;display:inline-flex;align-items:center;justify-content:center;transition:all var(--dur) var(--ease)}
+.overlay-close:hover{background:var(--silver-100);color:var(--ink-900);border-color:var(--silver-100)}
+.legal-wrap h2{font-family:var(--font-display);font-size:var(--fs-display-lg);color:var(--silver-100);margin-bottom:var(--sp-md)}
+.legal-wrap h3{font-family:var(--font-display);font-size:1.25rem;color:var(--silver-100);margin:var(--sp-lg) 0 var(--sp-sm)}
+.legal-wrap p,.legal-wrap li{font-size:var(--fs-body);color:var(--silver-300);line-height:1.75;margin-bottom:var(--sp-sm)}
+.legal-wrap ul{padding-left:24px;margin-bottom:var(--sp-md)}
+.legal-wrap strong{color:var(--silver-100);font-weight:500}
+
+/* ADMIN */
+.admin-gate{background:var(--ink-800);border:1px solid rgba(255,255,255,0.06);border-radius:var(--r-md);max-width:460px;margin:var(--sp-xl) auto;padding:var(--sp-xl);text-align:center}
+.admin-gate h3{font-family:var(--font-display);font-size:var(--fs-heading-xl);font-weight:500;color:var(--silver-100);margin-bottom:var(--sp-lg);letter-spacing:-0.02em}
+.admin-panel{display:none}
+.admin-panel.show{display:block}
+.admin-tabs{display:flex;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:var(--sp-lg);overflow-x:auto}
+.a-tab{padding:14px 24px;font-size:var(--fs-body-sm);font-weight:500;cursor:pointer;border:none;background:transparent;color:var(--silver-500);letter-spacing:0.06em;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all var(--dur-fast) var(--ease);font-family:var(--font-body);white-space:nowrap}
+.a-tab.active{color:var(--silver-100);border-bottom-color:var(--silver-100)}
+.admin-section-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-md);flex-wrap:wrap;gap:var(--sp-sm)}
+.admin-section-head h4{font-family:var(--font-display);font-size:1.125rem;font-weight:500;color:var(--silver-100)}
+.avail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--sp-md)}
+.avail-card{background:var(--ink-800);border:1px solid rgba(255,255,255,0.06);border-radius:var(--r-md);padding:var(--sp-md)}
+.avail-day{font-family:var(--font-display);font-size:var(--fs-body);font-weight:500;color:var(--silver-100);margin-bottom:var(--sp-md)}
+.tog-row{display:flex;align-items:center;gap:10px;margin-bottom:var(--sp-md)}
+.tog{width:40px;height:22px;background:rgba(255,255,255,0.08);border-radius:11px;position:relative;cursor:pointer;transition:background var(--dur-fast) var(--ease)}
+.tog.on{background:var(--silver-100)}
+.tog::after{content:'';position:absolute;width:18px;height:18px;border-radius:50%;background:var(--silver-300);top:2px;left:2px;transition:all var(--dur-fast) var(--ease)}
+.tog.on::after{left:20px;background:var(--ink-900)}
+.tog-lbl{font-size:var(--fs-body-sm);color:var(--silver-400)}
+.tr{display:flex;gap:6px;align-items:center}
+.tr select{flex:1;padding:8px 10px;background:var(--ink-900);border:1px solid rgba(255,255,255,0.08);border-radius:2px;font-size:0.75rem;color:var(--silver-200);font-family:var(--font-body)}
+.tr span{font-size:var(--fs-body-sm);color:var(--silver-500)}
+.blocked-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-top:var(--sp-md)}
+.blocked-chip{background:var(--ink-800);border:1px solid rgba(255,255,255,0.06);border-radius:var(--r-md);padding:10px 14px;display:flex;justify-content:space-between;align-items:center;font-size:var(--fs-body-sm);color:var(--silver-200)}
+.chip-remove{background:none;border:none;color:var(--silver-500);cursor:pointer;font-size:14px;padding:0 0 0 8px}
+.chip-remove:hover{color:var(--danger)}
+.edit-card{background:var(--ink-800);border:1px solid rgba(255,255,255,0.06);border-radius:var(--r-md);padding:var(--sp-md);margin-bottom:var(--sp-sm)}
+.edit-row{display:grid;gap:var(--sp-sm);margin-bottom:8px}
+.edit-row.cols-3{grid-template-columns:3fr 1fr 1fr auto}
+.edit-row.cols-4{grid-template-columns:2fr 1fr 1fr 1fr auto}
+.edit-row.cols-promo{grid-template-columns:1fr 1fr 1fr 2fr auto}
+@media(max-width:720px){.edit-row,.edit-row.cols-3,.edit-row.cols-4,.edit-row.cols-promo{grid-template-columns:1fr}}
+.edit-row input,.edit-row textarea,.edit-row select{background:var(--ink-900);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r-md);padding:10px 12px;font-size:var(--fs-body-sm);color:var(--silver-100);font-family:var(--font-body)}
+.edit-row textarea{min-height:40px;resize:vertical}
+.edit-row input:focus,.edit-row textarea:focus,.edit-row select:focus{outline:none;border-color:var(--silver-100)}
+.btn-delete{background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);color:var(--danger);padding:8px 12px;border-radius:var(--r-md);cursor:pointer;font-size:var(--fs-body-sm);font-family:var(--font-body)}
+.btn-delete:hover{background:var(--danger);color:var(--silver-100)}
+.btn-add{background:rgba(255,255,255,0.05);border:1px dashed rgba(255,255,255,0.15);color:var(--silver-300);padding:10px 20px;border-radius:var(--r-md);cursor:pointer;font-size:var(--fs-body-sm);font-family:var(--font-body);margin-top:var(--sp-sm)}
+.btn-add:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.3);color:var(--silver-100)}
+.bk-table{width:100%;border-collapse:collapse;background:var(--ink-800);border:1px solid rgba(255,255,255,0.06);border-radius:var(--r-md);overflow:hidden}
+.bk-table th{background:var(--ink-700);padding:14px 18px;text-align:left;font-size:var(--fs-label);font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--silver-500)}
+.bk-table td{padding:14px 18px;font-size:var(--fs-body-sm);color:var(--silver-200);border-top:1px solid rgba(255,255,255,0.05);vertical-align:top}
+.badge{padding:4px 10px;border-radius:999px;font-size:0.6875rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;display:inline-block}
+.badge-c{background:rgba(52,211,153,0.1);color:var(--success)}
+.badge-p{background:rgba(251,191,36,0.1);color:var(--warn)}
+.badge-x{background:rgba(239,68,68,0.1);color:var(--danger)}
+.btn-mini{font-size:0.75rem;background:var(--silver-100);color:var(--ink-900);border:none;padding:6px 14px;border-radius:999px;cursor:pointer;font-family:var(--font-body);font-weight:500;margin-right:4px}
+.btn-mini.secondary{background:rgba(255,255,255,0.05);color:var(--silver-200);border:1px solid rgba(255,255,255,0.1)}
+.btn-mini.secondary:hover{background:var(--silver-100);color:var(--ink-900)}
+
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;display:none;align-items:center;justify-content:center;padding:var(--sp-md)}
+.modal-overlay.show{display:flex}
+.modal{background:var(--ink-800);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r-md);max-width:640px;width:100%;max-height:90vh;overflow-y:auto;padding:var(--sp-xl);position:relative}
+.modal-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--silver-300);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:14px}
+.modal h3{font-family:var(--font-display);font-size:var(--fs-heading-xl);color:var(--silver-100);margin-bottom:var(--sp-md)}
+.modal p{font-size:var(--fs-body-sm);color:var(--silver-400);line-height:1.6;margin-bottom:var(--sp-md)}
+.qb-template{background:var(--ink-900);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r-md);padding:var(--sp-md);font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;color:var(--silver-200);line-height:1.7;white-space:pre-wrap;max-height:360px;overflow-y:auto;margin-bottom:var(--sp-md)}
+.btn-copy{width:100%;padding:14px;background:var(--silver-100);color:var(--ink-900);border:none;border-radius:999px;font-size:var(--fs-body);font-weight:500;cursor:pointer;font-family:var(--font-body)}
+.btn-copy:hover{background:var(--accent)}
+
+footer{background:var(--ink-900);padding:var(--sp-xxl) var(--gutter) var(--sp-lg);border-top:1px solid rgba(255,255,255,0.06)}
+.footer-inner{max-width:var(--max-w);margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:var(--sp-lg);margin-bottom:var(--sp-xl);padding-bottom:var(--sp-lg);border-bottom:1px solid rgba(255,255,255,0.06)}
+.footer-brand{font-family:var(--font-display);font-size:var(--fs-heading-xl);font-weight:500;color:var(--silver-100);letter-spacing:-0.02em;margin-bottom:var(--sp-sm)}
+.footer-tagline{font-size:var(--fs-body-sm);color:var(--silver-400);line-height:1.65;max-width:36ch;font-weight:300}
+.footer-col-head{font-size:var(--fs-label);letter-spacing:0.2em;text-transform:uppercase;color:var(--silver-500);margin-bottom:var(--sp-md);font-weight:500}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:var(--fs-body-sm);color:var(--silver-400);text-decoration:none;font-weight:300;cursor:pointer;transition:color var(--dur-fast) var(--ease)}
+.footer-links a:hover{color:var(--silver-100)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--sp-sm);padding-top:var(--sp-md)}
+.footer-copy{font-size:0.6875rem;color:var(--silver-600);letter-spacing:0.08em}
+.footer-admin-link{font-size:0.625rem;color:var(--silver-600);letter-spacing:0.1em;cursor:pointer;padding:4px 8px;border:1px solid rgba(255,255,255,0.05);border-radius:var(--r-md);transition:all var(--dur) var(--ease);text-decoration:none}
+.footer-admin-link:hover{color:var(--silver-300);border-color:rgba(255,255,255,0.15)}
+
+.toast{position:fixed;bottom:var(--sp-lg);right:var(--sp-lg);background:var(--silver-100);color:var(--ink-900);padding:14px 22px;border-radius:999px;font-size:var(--fs-body-sm);font-weight:500;transform:translateY(100px);opacity:0;transition:all var(--dur) var(--ease);z-index:9999;box-shadow:0 10px 40px rgba(0,0,0,0.4);display:flex;align-items:center;gap:10px;max-width:calc(100vw - 4rem)}
+.toast.show{transform:translateY(0);opacity:1}
+.toast-dot{width:6px;height:6px;border-radius:50%;background:var(--ink-900);flex-shrink:0}
+
+.loading{display:flex;align-items:center;justify-content:center;padding:var(--sp-xl);color:var(--silver-500);font-size:var(--fs-body-sm)}
+.spinner{width:18px;height:18px;border:2px solid rgba(255,255,255,0.1);border-top-color:var(--silver-100);border-radius:50%;animation:spin 0.8s linear infinite;margin-right:10px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(32px);transition:all 0.8s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media (max-width:1024px){
+  .services-grid,.pkg-grid,.process-grid{grid-template-columns:repeat(2,1fr)}
+  .testi-grid{grid-template-columns:1fr}
+  .booking-layout,.about-inner{grid-template-columns:1fr;gap:var(--sp-lg)}
+  .section-header{grid-template-columns:1fr}
+  .header-right{justify-self:start}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .mosaic{grid-auto-rows:140px}
+  .m-item.big{grid-column:span 12;grid-row:span 2}
+  .m-item.med{grid-column:span 6;grid-row:span 2}
+  .m-item.sm{grid-column:span 6;grid-row:span 1}
+}
+@media (max-width:720px){
+  .nav-links{position:fixed;top:72px;left:0;right:0;background:var(--ink-900);flex-direction:column;padding:var(--sp-md);gap:var(--sp-sm);border-bottom:1px solid rgba(255,255,255,0.06);transform:translateY(-110%);transition:transform var(--dur) var(--ease);z-index:99}
+  .nav-links.open{transform:translateY(0)}
+  .menu-toggle{display:block}
+  .hero-footer{grid-template-columns:repeat(2,1fr)}
+  .hero-stat{border-right:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}
+  .hero-stat:nth-child(even){border-right:none}
+  .services-grid,.pkg-grid,.process-grid{grid-template-columns:1fr}
+  .bk-row{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr;gap:var(--sp-md)}
+  .hero-meta{display:block}
+  .hero-p{margin-bottom:var(--sp-lg)}
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a class="nav-logo" href="#home">
+    <svg class="nav-cam" viewBox="0 0 32 26" fill="none"><rect x="1" y="7" width="30" height="17" rx="3" fill="#fafafa"/><path d="M11 7V5a2 2 0 012-2h6a2 2 0 012 2v2" fill="#fafafa"/><circle cx="16" cy="15.5" r="4.5" stroke="#0a0a0a" stroke-width="1.5" fill="none"/><circle cx="16" cy="15.5" r="2" fill="#0a0a0a"/><rect x="23" y="9" width="6" height="3" rx="1" fill="#909090"/></svg>
+    <div class="nav-brand"><span class="nav-name">Home Photography</span><span class="nav-sub">305 · Miami</span></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a class="nav-book" href="#booking">Book a shoot <span class="btn-arrow">→</span></a></li>
+  </ul>
+  <button class="menu-toggle" onclick="toggleMenu()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.5"/></svg></button>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div><div class="hero-grain"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow"><span class="hero-dot"></span>Miami Real Estate Media</div>
+      <h1>Spaces that<br><span class="italic">sell themselves.</span></h1>
+    </div>
+    <div class="hero-meta">
+      <p class="hero-p">Premium photography, cinematic drone video, and 3D tours for South Florida's top agents and developers.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="goto('#booking')">Book a shoot <span class="btn-arrow">→</span></button>
+        <button class="btn btn-ghost" onclick="goto('#portfolio')">View portfolio <span class="btn-arrow">→</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="hero-footer">
+    <div class="hero-stat"><span class="stat-value">200+</span><span class="stat-label">Properties Shot</span></div>
+    <div class="hero-stat"><span class="stat-value">48hr</span><span class="stat-label">Turnaround</span></div>
+    <div class="hero-stat"><span class="stat-value">FAA</span><span class="stat-label">Certified Pilot</span></div>
+    <div class="hero-stat"><span class="stat-value">5★</span><span class="stat-label">Google Rated</span></div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-inner">
+    <span class="trust-label">Trusted by</span><div class="trust-line"></div>
+    <div class="trust-brands">
+      <span class="trust-brand">TrustPoint Realty</span><span class="trust-brand">Taco Bell</span><span class="trust-brand">Wendy's</span><span class="trust-brand">Lifestyle International</span><span class="trust-brand">EP Smart</span>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="services">
+  <div class="section-header">
+    <div><div class="eyebrow">What we deliver</div><h2 class="display">Premium services,<br><span class="italic">à la carte.</span></h2></div>
+    <p class="header-right">Pick any combination — services and packages stack. All deliverables are color-corrected and delivered within 48 hours.</p>
+  </div>
+  <div class="services-grid" id="svcGrid"><div class="loading"><div class="spinner"></div>Loading services…</div></div>
+</section>
+
+<section class="packages-section" id="packages">
+  <div style="max-width:var(--max-w);margin:0 auto;padding:0 var(--gutter)">
+    <div class="section-header">
+      <div><div class="eyebrow">Packages</div><h2 class="display">Bundled for<br><span class="italic">every listing.</span></h2></div>
+      <p class="header-right">Save when you book the full media suite. Combine with individual services for a custom build.</p>
+    </div>
+    <div class="pkg-grid" id="pkgGrid"><div class="loading"><div class="spinner"></div>Loading packages…</div></div>
+  </div>
+</section>
+
+<div id="cartBarWrap" style="max-width:var(--max-w);margin:0 auto;padding:0 var(--gutter)"><div id="cartBar" class="cart-bar"><div class="cart-info"><div class="cart-count" id="cCount">0</div><span class="cart-items-text" id="cItems"></span></div><div style="display:flex;align-items:center;gap:20px"><span class="cart-total" id="cTotal"></span><button class="btn-book" onclick="goto('#booking')">Continue <span class="btn-arrow" style="background:var(--silver-100);color:var(--ink-900)">→</span></button></div></div></div>
+
+<section class="section" id="portfolio">
+  <div class="section-header">
+    <div><div class="eyebrow">Portfolio</div><h2 class="display">Recent<br><span class="italic">work.</span></h2></div>
+    <p class="header-right">Selected properties from across South Florida — from waterfront estates to new developments.</p>
+  </div>
+  <div class="mosaic">
+    <div class="m-item big m-bg-1"><div class="m-bg"><svg class="m-icon" width="80" height="68" viewBox="0 0 32 26" fill="none"><rect x="1" y="7" width="30" height="17" rx="3" fill="#fafafa"/><circle cx="16" cy="15.5" r="4.5" fill="none" stroke="#0a0a0a" stroke-width="1.5"/></svg></div><div class="m-info"><div class="m-tag">Drone Aerial</div><div class="m-loc">Coral Gables Estate</div></div></div>
+    <div class="m-item med m-bg-2"><div class="m-bg"><svg class="m-icon" width="64" height="56" viewBox="0 0 32 26" fill="none"><rect x="1" y="7" width="30" height="17" rx="3" fill="#fafafa"/><circle cx="16" cy="15.5" r="4.5" fill="none" stroke="#0a0a0a" stroke-width="1.5"/></svg></div><div class="m-info"><div class="m-tag">Interior</div><div class="m-loc">Brickell Penthouse</div></div></div>
+    <div class="m-item sm m-bg-3"><div class="m-bg"><svg class="m-icon" width="48" height="42" viewBox="0 0 32 26" fill="none"><rect x="1" y="7" width="30" height="17" rx="3" fill="#fafafa"/><circle cx="16" cy="15.5" r="4.5" fill="none" stroke="#0a0a0a" stroke-width="1.5"/></svg></div><div class="m-info"><div class="m-tag">FPV Video</div><div class="m-loc">Pinecrest Home</div></div></div>
+    <div class="m-item sm m-bg-4"><div class="m-bg"><svg class="m-icon" width="48" height="42" viewBox="0 0 32 26" fill="none"><rect x="1" y="7" width="30" height="17" rx="3" fill="#fafafa"/><circle cx="16" cy="15.5" r="4.5" fill="none" stroke="#0a0a0a" stroke-width="1.5"/></svg></div><div class="m-info"><div class="m-tag">3D Render</div><div class="m-loc">Aventura Development</div></div></div>
+    <div class="m-item sm m-bg-5"><div class="m-bg"><svg class="m-icon" width="48" height="42" viewBox="0 0 32 26" fill="none"><rect x="1" y="7" width="30" height="17" rx="3" fill="#fafafa"/><circle cx="16" cy="15.5" r="4.5" fill="none" stroke="#0a0a0a" stroke-width="1.5"/></svg></div><div class="m-info"><div class="m-tag">Agent Video</div><div class="m-loc">Kendall Luxury Home</div></div></div>
+  </div>
+</section>
+
+<section class="section-full process-section">
+  <div style="max-width:var(--max-w);margin:0 auto;padding:0 var(--gutter)">
+    <div class="section-header">
+      <div><div class="eyebrow">How it works</div><h2 class="display">Simple.<br><span class="italic">Reliable.</span></h2></div>
+      <p class="header-right">From booking to delivery in 48 hours. No hidden fees, no surprises.</p>
+    </div>
+    <div class="process-grid">
+      <div class="step"><div class="step-num">01<span class="step-num-label">Book</span></div><div class="step-title">Book online</div><div class="step-desc">Pick your services and date, submit property details. Confirmation arrives within 30 minutes.</div></div>
+      <div class="step"><div class="step-num">02<span class="step-num-label">Shoot</span></div><div class="step-title">We show up</div><div class="step-desc">Pablo and team arrive on-site fully equipped. We handle everything — you just let us in.</div></div>
+      <div class="step"><div class="step-num">03<span class="step-num-label">Deliver</span></div><div class="step-title">48-hour delivery</div><div class="step-desc">Edited files land in your inbox within 48 hours — ready for MLS, social, and your listing page.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-header"><div><div class="eyebrow">Reviews</div><h2 class="display">What clients<br><span class="italic">say.</span></h2></div></div>
+  <div class="testi-grid">
+    <div class="testi"><div class="testi-stars">★★★★★</div><div class="testi-quote">"Pablo delivered the most stunning aerial footage I've seen for a listing. My client was blown away."</div><div class="testi-author"><div class="testi-avatar">JR</div><div><div class="testi-name">Johanna Ruiz</div><div class="testi-role">TrustPoint Realty</div></div></div></div>
+    <div class="testi"><div class="testi-stars">★★★★★</div><div class="testi-quote">"Fast, professional. The FPV drone video was unlike anything I'd seen before. Buyers toured before we held an open house."</div><div class="testi-author"><div class="testi-avatar">MT</div><div><div class="testi-name">Mike Torres</div><div class="testi-role">Compass Miami</div></div></div></div>
+    <div class="testi"><div class="testi-stars">★★★★★</div><div class="testi-quote">"Turned around our full media package in under 48 hours. The 3D render made our development look finished."</div><div class="testi-author"><div class="testi-avatar">SL</div><div><div class="testi-name">Sandra Lopez</div><div class="testi-role">Lifestyle Intl Realty</div></div></div></div>
+  </div>
+</section>
+
+<section class="section-full booking-section" id="booking">
+  <div style="max-width:var(--max-w);margin:0 auto;padding:0 var(--gutter)">
+    <div class="section-header">
+      <div><div class="eyebrow">Book a session</div><h2 class="display">Schedule<br><span class="italic">your shoot.</span></h2></div>
+      <p class="header-right">Pick your services above, choose a date, and you're set. Confirmation within 30 minutes.</p>
+    </div>
+    <div class="booking-layout" id="bkLayout">
+      <div>
+        <div class="cal-container">
+          <div class="cal-head"><span class="cal-month" id="calLbl">—</span><div class="cal-nav"><button onclick="mv(-1)">‹</button><button onclick="mv(1)">›</button></div></div>
+          <div class="cal-dow" id="calDow"></div><div class="cal-days" id="calDays"></div>
+          <div class="cal-legend"><div class="leg"><div class="leg-dot" style="background:var(--silver-100)"></div>Selected</div><div class="leg"><div class="leg-dot" style="background:var(--silver-600)"></div>Unavailable</div><div class="leg"><div class="leg-dot" style="box-shadow:inset 0 0 0 1px rgba(255,255,255,0.3)"></div>Today</div></div>
+        </div>
+        <div class="time-wrap" id="tWrap"><div class="cal-container"><div class="time-head">Available times — <span id="tDateLbl"></span></div><div class="time-grid" id="tGrid"></div></div></div>
+      </div>
+      <div class="bk-form">
+        <form id="bkForm" onsubmit="submitBk(event)">
+          <div class="bk-row" style="margin-bottom:var(--sp-md)">
+            <div><label class="fl">First name</label><input class="fi" type="text" required id="fName"/></div>
+            <div><label class="fl">Last name</label><input class="fi" type="text" required id="fLast"/></div>
+          </div>
+          <div style="margin-bottom:var(--sp-md)"><label class="fl">Email</label><input class="fi" type="email" required id="fEmail"/></div>
+          <div style="margin-bottom:var(--sp-md)"><label class="fl">Phone</label><input class="fi" type="tel" required id="fPhone"/></div>
+          <div style="margin-bottom:var(--sp-md)"><label class="fl">Property address</label><input class="fi" type="text" required id="fAddr"/></div>
+
+          <div style="margin-bottom:var(--sp-md)">
+            <label class="fl">Selected services</label>
+            <div id="bkCartList" style="padding:14px 18px;background:var(--ink-900);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r-md);font-size:var(--fs-body-sm);color:var(--silver-400);min-height:52px;display:flex;align-items:center">Add services or packages above to get started.</div>
+          </div>
+
+          <div style="margin-bottom:var(--sp-md)"><label class="fl">Travel</label><div class="travel-note">May be subject to a travel fee depending on distance. You'll be notified if one applies before confirmation.</div></div>
+
+          <div style="margin-bottom:var(--sp-md)">
+            <label class="fl">Promo code</label>
+            <div class="promo-row"><input class="fi" type="text" id="fPromo" placeholder="e.g. FTC or LOYALCUSTOMER" style="text-transform:uppercase"/><button type="button" class="btn-apply" onclick="applyPromo()">Apply</button></div>
+            <div class="promo-status" id="promoStatus"></div>
+          </div>
+
+          <div style="margin-bottom:var(--sp-md)"><label class="fl">Notes</label><textarea class="ft" id="fNotes" placeholder="Access codes, parking, special requests..."></textarea></div>
+
+          <div class="order-box" id="ordBox"><div id="ordLines"></div><div class="ord-total"><span class="ord-total-label">Total</span><span class="ord-total-val" id="ordTotal">—</span></div></div>
+
+          <label class="consent-box" style="margin-top:var(--sp-md)"><input type="checkbox" id="consent" required/><span>I agree to the <a onclick="openLegal('privacy')">Privacy Policy</a> and <a onclick="openLegal('terms')">Terms of Service</a>. I consent to Home Photography 305 contacting me about this booking.</span></label>
+
+          <button type="submit" class="btn-submit" id="submitBtn" style="margin-top:var(--sp-md)">Request booking <span class="btn-submit-arrow">→</span></button>
+          <p class="fine">Confirmation within 30 minutes · Pablo@bluecollarworkersllc.com · 305-587-6549</p>
+        </form>
+      </div>
+    </div>
+
+    <div class="success-card" id="successCard" style="margin-top:var(--sp-xl)">
+      <div class="success-icon">✓</div>
+      <div class="success-title">Booking request received</div>
+      <div class="success-body" id="successBody">You'll hear back from Pablo within 30 minutes.</div>
+      <div class="success-actions">
+        <a id="gcalBtn" class="btn-cal" target="_blank" rel="noopener">📅 Add to Google Calendar</a>
+        <a id="icalBtn" class="btn-cal">🍎 Add to Apple Calendar</a>
+        <button class="btn-cal" onclick="resetBookingForm()">Make another booking</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-photo"><div class="about-placeholder"><svg width="72" height="72" viewBox="0 0 72 72" fill="none"><circle cx="36" cy="28" r="12" stroke="rgba(255,255,255,0.3)" stroke-width="2"/><path d="M12 64c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="rgba(255,255,255,0.3)" stroke-width="2"/></svg><p>Your photo here</p></div><div class="about-badge">Pablo Hernandez · Founder</div></div>
+    <div>
+      <div class="eyebrow">The photographer</div>
+      <h2 class="about-name">Miami-born.<br><span class="italic">Lens-focused.</span></h2>
+      <p class="about-bio">I've spent years behind the lens capturing South Florida's most sought-after properties — from waterfront estates in Coral Gables to new developments in Aventura. Every shoot is personal to me.</p>
+      <p class="about-bio">FAA-certified drone pilot. Licensed real estate agent. I know what buyers notice and what agents need to close faster. Every deliverable is built to convert.</p>
+      <div class="about-creds"><div><span class="cred-num">200+</span><span class="cred-lbl">Properties shot</span></div><div><span class="cred-num">48hr</span><span class="cred-lbl">Delivery</span></div><div><span class="cred-num">FAA</span><span class="cred-lbl">Certified</span></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div><div class="footer-brand">Home Photography 305</div><p class="footer-tagline">Premium real estate media for South Florida's top agents and developers. FAA-certified. 48-hour delivery.</p></div>
+      <div><div class="footer-col-head">Services</div><ul class="footer-links"><li><a href="#services">Drone Photography</a></li><li><a href="#services">FPV Drone Video</a></li><li><a href="#services">Agent on Camera</a></li><li><a href="#services">3D Render Overlays</a></li><li><a href="#packages">Packages</a></li></ul></div>
+      <div><div class="footer-col-head">Company</div><ul class="footer-links"><li><a href="#about">About Pablo</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#booking">Book a shoot</a></li><li><a onclick="openLegal('privacy')">Privacy Policy</a></li><li><a onclick="openLegal('terms')">Terms of Service</a></li></ul></div>
+      <div><div class="footer-col-head">Contact</div><ul class="footer-links"><li><a href="mailto:Pablo@bluecollarworkersllc.com">Pablo@bluecollarworkersllc.com</a></li><li><a href="tel:3055876549">305.587.6549</a></li><li><a href="#">@HomePhotography305</a></li><li><a href="#">Miami, FL · Kendall</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Home Photography 305 · Pablo Hernandez</span>
+      <div style="display:flex;gap:12px;align-items:center">
+        <span class="footer-copy">Built by Blue-Collar Workers LLC</span>
+        <a class="footer-admin-link" onclick="openAdmin()">STAFF</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- LEGAL OVERLAY -->
+<div class="overlay" id="legalOverlay"><div style="max-width:800px;margin:0 auto;padding:var(--sp-xl) var(--gutter)"><div class="overlay-topbar"><div class="overlay-title" id="legalTitle">Privacy Policy</div><button class="overlay-close" onclick="closeLegal()">✕</button></div><div class="legal-wrap" id="legalContent"></div></div></div>
+
+<!-- ADMIN OVERLAY -->
+<div class="overlay" id="adminOverlay">
+  <div class="overlay-wrap">
+    <div class="overlay-topbar"><div class="overlay-title">Staff dashboard</div><button class="overlay-close" onclick="closeAdmin()">✕</button></div>
+    <div class="admin-gate" id="aGate">
+      <h3>Sign in</h3>
+      <div style="margin-bottom:var(--sp-md);text-align:left"><label class="fl">Password</label><input class="fi" type="password" id="aPass" onkeydown="if(event.key==='Enter')aLogin()"/></div>
+      <button class="btn-submit" onclick="aLogin()">Sign in <span class="btn-submit-arrow">→</span></button>
+    </div>
+    <div class="admin-panel" id="aPanel">
+      <div class="admin-tabs">
+        <button class="a-tab active" onclick="aTab('bk',this)">Bookings</button>
+        <button class="a-tab" onclick="aTab('av',this)">Availability</button>
+        <button class="a-tab" onclick="aTab('sv',this)">Services</button>
+        <button class="a-tab" onclick="aTab('pk',this)">Packages</button>
+        <button class="a-tab" onclick="aTab('pr',this)">Promo Codes</button>
+      </div>
+
+      <div id="tab-bk">
+        <div class="admin-section-head"><h4>All bookings</h4><div><button onclick="refreshBookings()" class="btn-mini secondary">Refresh</button><button onclick="aOut()" class="btn-mini secondary">Sign out</button></div></div>
+        <div id="bkTableWrap"></div>
+      </div>
+      <div id="tab-av" class="hidden">
+        <div class="admin-section-head"><h4>Weekly availability</h4><button onclick="saveAllConfig()" class="btn-mini">Save changes</button></div>
+        <p style="font-size:var(--fs-body);color:var(--silver-400);margin-bottom:var(--sp-md)">Turn days on/off and set start/end hours. Click Save to push live.</p>
+        <div class="avail-grid" id="aGrid"></div>
+        <div class="admin-section-head" style="margin-top:var(--sp-xl)"><h4>Block specific dates</h4></div>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><input type="date" id="blockDateInput" class="fi" style="max-width:200px;padding:10px 14px"/><button class="btn-mini" onclick="addBlockedDate()">Block this date</button></div>
+        <div class="blocked-grid" id="blockedGrid"></div>
+      </div>
+      <div id="tab-sv" class="hidden">
+        <div class="admin-section-head"><h4>À la carte services</h4><button onclick="saveAllConfig()" class="btn-mini">Save changes</button></div>
+        <p style="font-size:var(--fs-body);color:var(--silver-400);margin-bottom:var(--sp-md)">Edit price, FTC (first-time client) price, title, and description. Click Save to push live.</p>
+        <div id="svcEditRows"></div>
+        <button class="btn-add" onclick="addService()">+ Add new service</button>
+      </div>
+      <div id="tab-pk" class="hidden">
+        <div class="admin-section-head"><h4>Packages</h4><button onclick="saveAllConfig()" class="btn-mini">Save changes</button></div>
+        <p style="font-size:var(--fs-body);color:var(--silver-400);margin-bottom:var(--sp-md)">Each package has a price and an FTC price. Items = one per line.</p>
+        <div id="pkgEditRows"></div>
+        <button class="btn-add" onclick="addPackage()">+ Add new package</button>
+      </div>
+      <div id="tab-pr" class="hidden">
+        <div class="admin-section-head"><h4>Promo codes</h4><button onclick="saveAllConfig()" class="btn-mini">Save changes</button></div>
+        <p style="font-size:var(--fs-body);color:var(--silver-400);margin-bottom:var(--sp-md)">Types: <strong>ftc</strong> = uses each item's FTC price · <strong>percent</strong> = % off subtotal · <strong>flat</strong> = flat $ off subtotal.</p>
+        <div id="promoEditRows"></div>
+        <button class="btn-add" onclick="addPromo()">+ Add new promo code</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QB MODAL -->
+<div class="modal-overlay" id="qbModal"><div class="modal"><button class="modal-close" onclick="closeQB()">✕</button><h3>QuickBooks quote template</h3><p>Copy this block and paste it into a new QuickBooks estimate.</p><pre class="qb-template" id="qbTemplate"></pre><button class="btn-copy" onclick="copyQB()">📋 Copy to clipboard</button></div></div>
+
+<div class="toast" id="toast"><span class="toast-dot"></span><span id="toastMsg"></span></div>
+
+<script>
+/* ═══════════════════════════════════════════
+   CONFIG — change API_BASE to your Cloudflare Worker URL
+   ═══════════════════════════════════════════ */
+const API_BASE = 'https://hp305-api.pablojhernandez0.workers.dev';
+const FORMSPREE_URL = ''; // optional: paste your Formspree endpoint for email notifications
+
+/* ═══════════════════════════════════════════
+   STATE
+   ═══════════════════════════════════════════ */
+let config = null; // loaded from /api/config
+let adminToken = sessionStorage.getItem('hp305_token') || null;
+let adminBookings = [];
+let cart = []; // [{ kind: 'service'|'package', id }]
+let appliedPromo = null; // { code, type, value, ... }
+
+let cur = new Date(), selDay = null, selMonth = null, selYear = null, selTime = null;
+
+/* ═══════════════════════════════════════════
+   API HELPERS
+   ═══════════════════════════════════════════ */
+async function api(path, opts = {}) {
+  const url = API_BASE + path;
+  const headers = { 'Content-Type': 'application/json', ...(opts.headers || {}) };
+  if (opts.auth && adminToken) headers.Authorization = 'Bearer ' + adminToken;
+  const res = await fetch(url, { ...opts, headers });
+  const data = await res.json().catch(() => ({ error: 'Invalid JSON' }));
+  if (!res.ok) throw new Error(data.error || ('HTTP ' + res.status));
+  return data;
+}
+
+/* ═══════════════════════════════════════════
+   HELPERS
+   ═══════════════════════════════════════════ */
+function goto(s){document.querySelector(s).scrollIntoView({behavior:'smooth'})}
+function toast(m){const t=document.getElementById('toast');document.getElementById('toastMsg').textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500)}
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c])}
+function formatMoney(n){return '$' + (n||0).toLocaleString()}
+
+window.addEventListener('scroll',()=>{const nav=document.getElementById('navbar');nav.style.background = window.scrollY>20 ? 'rgba(10,10,10,0.92)' : 'rgba(10,10,10,0.72)'});
+
+/* ═══════════════════════════════════════════
+   LOAD & RENDER
+   ═══════════════════════════════════════════ */
+async function loadConfig() {
+  try {
+    config = await api('/api/config');
+    renderServices();
+    renderPackages();
+    buildCal();
+  } catch (e) {
+    document.getElementById('svcGrid').innerHTML = '<div class="loading" style="color:var(--danger)">Unable to load services. Check API_BASE in the HTML.</div>';
+    document.getElementById('pkgGrid').innerHTML = '';
+    console.error('Config load failed:', e);
+  }
+}
+
+function renderServices() {
+  const grid = document.getElementById('svcGrid');
+  grid.innerHTML = config.services.map(s => {
+    const inCart = cart.some(c => c.kind==='service' && c.id===s.id);
+    return `<div class="svc${inCart?' selected':''}" data-id="${s.id}" onclick="toggleCart('service','${s.id}',this)">
+      <div><div class="svc-top"><span class="svc-num">${esc(s.num)}</span><div class="item-check">${inCart?'✓':''}</div></div>
+      <div class="svc-title">${esc(s.title)}</div><div class="svc-desc">${esc(s.desc)}</div></div>
+      <div class="svc-bottom"><div class="svc-price"><sup>$</sup>${s.price}</div></div></div>`;
+  }).join('');
+}
+
+function renderPackages() {
+  const grid = document.getElementById('pkgGrid');
+  grid.innerHTML = config.packages.map(p => {
+    const inCart = cart.some(c => c.kind==='package' && c.id===p.id);
+    return `<div class="pkg${p.featured?' featured':''}${inCart?' selected':''}" onclick="toggleCart('package','${p.id}',this)">
+      <div class="pkg-top"><span class="pkg-tag">${esc(p.tag)}</span><div class="item-check">${inCart?'✓':''}</div></div>
+      <div class="pkg-name">${esc(p.name)}</div>
+      <div class="pkg-price-row"><div class="pkg-price"><sup>$</sup>${p.price.toLocaleString()}</div></div>
+      <ul class="pkg-list">${p.items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul></div>`;
+  }).join('');
+}
+
+/* ═══════════════════════════════════════════
+   CART
+   ═══════════════════════════════════════════ */
+function toggleCart(kind, id, el) {
+  const existing = cart.findIndex(c => c.kind===kind && c.id===id);
+  if (existing >= 0) cart.splice(existing, 1);
+  else cart.push({ kind, id });
+  el.classList.toggle('selected');
+  const check = el.querySelector('.item-check');
+  if (check) check.textContent = el.classList.contains('selected') ? '✓' : '';
+  updateCartBar();
+  updateOrderSummary();
+  updateBookingCartDisplay();
+}
+
+function cartLineItems() {
+  return cart.map(c => {
+    const src = (c.kind==='service' ? config.services : config.packages).find(x=>x.id===c.id);
+    return src ? { kind:c.kind, id:c.id, name: src.title||src.name, price: src.price, ftc: src.ftc||src.price } : null;
+  }).filter(Boolean);
+}
+
+function computeTotal() {
+  const items = cartLineItems();
+  const subtotal = items.reduce((s,i) => s+i.price, 0);
+  let discount = 0, total = subtotal;
+  if (appliedPromo) {
+    if (appliedPromo.type === 'ftc') {
+      const ftcTotal = items.reduce((s,i) => s + i.ftc, 0);
+      discount = subtotal - ftcTotal;
+      total = ftcTotal;
+    } else if (appliedPromo.type === 'percent') {
+      discount = Math.round(subtotal * (appliedPromo.value / 100));
+      total = subtotal - discount;
+    } else if (appliedPromo.type === 'flat') {
+      discount = Math.min(appliedPromo.value || 0, subtotal);
+      total = subtotal - discount;
+    }
+  }
+  return { items, subtotal, discount, total };
+}
+
+function updateCartBar() {
+  const bar = document.getElementById('cartBar');
+  const items = cartLineItems();
+  if (!items.length) { bar.style.display='none'; return; }
+  bar.style.display='flex';
+  document.getElementById('cCount').textContent = items.length;
+  document.getElementById('cItems').textContent = items.map(i=>i.name).join(' · ');
+  const { total } = computeTotal();
+  document.getElementById('cTotal').textContent = formatMoney(total);
+}
+
+function updateBookingCartDisplay() {
+  const el = document.getElementById('bkCartList');
+  const items = cartLineItems();
+  if (!items.length) { el.innerHTML = 'Add services or packages above to get started.'; return; }
+  el.innerHTML = '<div style="display:flex;flex-direction:column;gap:6px;width:100%;color:var(--silver-200)">' +
+    items.map(i=>`<div style="display:flex;justify-content:space-between;font-size:0.85rem"><span>${esc(i.name)}</span><span style="color:var(--silver-400)">${formatMoney(i.price)}</span></div>`).join('') +
+    '</div>';
+}
+
+function updateOrderSummary() {
+  const box = document.getElementById('ordBox');
+  const { items, subtotal, discount, total } = computeTotal();
+  if (!items.length) { box.classList.remove('show'); return; }
+  box.classList.add('show');
+  const lines = [
+    ...items.map(i => `<div class="ord-line"><span>${esc(i.name)}</span><span>${formatMoney(i.price)}</span></div>`),
+    `<div class="ord-line"><span>Subtotal</span><span>${formatMoney(subtotal)}</span></div>`,
+  ];
+  if (discount > 0) lines.push(`<div class="ord-discount"><span>${esc(appliedPromo ? appliedPromo.code : 'Discount')} discount</span><span>−${formatMoney(discount)}</span></div>`);
+  document.getElementById('ordLines').innerHTML = lines.join('');
+  document.getElementById('ordTotal').textContent = formatMoney(total);
+}
+
+function applyPromo() {
+  const code = document.getElementById('fPromo').value.trim();
+  const status = document.getElementById('promoStatus');
+  if (!code) { appliedPromo = null; status.className = 'promo-status'; updateOrderSummary(); return; }
+  if (!cart.length) { status.className='promo-status err'; status.textContent='Add at least one service or package first.'; return; }
+  const match = config.promos.find(p => p.code.toLowerCase() === code.toLowerCase());
+  if (!match) { appliedPromo=null; status.className='promo-status err'; status.textContent='Invalid promo code.'; updateCartBar(); updateOrderSummary(); return; }
+  appliedPromo = match;
+  const { discount } = computeTotal();
+  status.className = 'promo-status ok';
+  status.textContent = `"${match.code}" applied — you save ${formatMoney(discount)}.`;
+  updateCartBar(); updateOrderSummary();
+}
+
+/* ═══════════════════════════════════════════
+   CALENDAR
+   ═══════════════════════════════════════════ */
+function isoDate(y,m,d){return `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`}
+function isDateBlocked(iso){return config && config.blockedDates.includes(iso)}
+
+function buildCal(){
+  if (!config) return;
+  const months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const dows=['Su','Mo','Tu','We','Th','Fr','Sa'];
+  document.getElementById('calLbl').textContent=months[cur.getMonth()]+' '+cur.getFullYear();
+  document.getElementById('calDow').innerHTML=dows.map(d=>`<div class="cal-dow-cell">${d}</div>`).join('');
+  const y=cur.getFullYear(),m=cur.getMonth();
+  const first=new Date(y,m,1).getDay();
+  const dim=new Date(y,m+1,0).getDate();
+  const today=new Date();
+  let h='';
+  for(let i=0;i<first;i++)h+='<div class="cal-cell empty"></div>';
+  for(let d=1;d<=dim;d++){
+    const dt=new Date(y,m,d);
+    const past=dt<new Date(today.getFullYear(),today.getMonth(),today.getDate());
+    const dow=dt.getDay();
+    const dayOn=config.availability[dow] && config.availability[dow].on;
+    const blocked=isDateBlocked(isoDate(y,m,d));
+    const unavail=!dayOn || blocked;
+    const isToday=dt.toDateString()===today.toDateString();
+    let cl='cal-cell';
+    if(unavail||past)cl+=' booked';
+    else cl+=' avail';
+    if(isToday)cl+=' today';
+    if(selDay===d&&selMonth===m&&selYear===y)cl+=' sel';
+    const click=(!unavail&&!past)?`onclick="selD(${d})"`:'';
+    h+=`<div class="${cl}" ${click}>${d}</div>`;
+  }
+  document.getElementById('calDays').innerHTML=h;
+}
+
+function selD(d){
+  selDay=d;selMonth=cur.getMonth();selYear=cur.getFullYear();buildCal();
+  const mn=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  document.getElementById('tDateLbl').textContent=mn[cur.getMonth()]+' '+d+', '+cur.getFullYear();
+  buildTimes();
+  document.getElementById('tWrap').classList.add('show');
+}
+function mv(dir){cur.setMonth(cur.getMonth()+dir);buildCal()}
+
+function buildTimes(){
+  if(selYear===null) return;
+  const dow = new Date(selYear,selMonth,selDay).getDay();
+  const dayConfig = config.availability[dow];
+  if(!dayConfig || !dayConfig.on){document.getElementById('tGrid').innerHTML='<p style="font-size:0.8rem;color:var(--silver-500);grid-column:span 3">No times available this day.</p>';return}
+  const startH=parseTime(dayConfig.s), endH=parseTime(dayConfig.e);
+  const slots=[];
+  for(let h=startH;h<endH;h++) slots.push(formatTime(h));
+  document.getElementById('tGrid').innerHTML=slots.map(s=>`<div class="t-slot" onclick="selT(this,'${s}')">${s}</div>`).join('');
+}
+function parseTime(str){const m=str.match(/(\d+):(\d+)\s*(AM|PM)/i);if(!m)return 8;let h=parseInt(m[1]);if(m[3].toUpperCase()==='PM'&&h!==12)h+=12;if(m[3].toUpperCase()==='AM'&&h===12)h=0;return h}
+function formatTime(h){const ampm=h>=12?'PM':'AM';const hh=h===0?12:h>12?h-12:h;return `${hh}:00 ${ampm}`}
+function selT(el,t){document.querySelectorAll('.t-slot').forEach(x=>x.classList.remove('sel'));el.classList.add('sel');selTime=t}
+
+/* ═══════════════════════════════════════════
+   SUBMIT BOOKING
+   ═══════════════════════════════════════════ */
+async function submitBk(event){
+  event.preventDefault();
+  if (!cart.length) { toast('Please add at least one service or package'); return; }
+  const btn = document.getElementById('submitBtn');
+  const name = document.getElementById('fName').value.trim() + ' ' + document.getElementById('fLast').value.trim();
+  const email = document.getElementById('fEmail').value.trim();
+  const phone = document.getElementById('fPhone').value.trim();
+  const address = document.getElementById('fAddr').value.trim();
+  const notes = document.getElementById('fNotes').value.trim();
+  const dateISO = (selYear!==null) ? isoDate(selYear,selMonth,selDay) : '';
+
+  btn.disabled = true;
+  btn.innerHTML = 'Sending… <span class="btn-submit-arrow">→</span>';
+
+  const body = {
+    name, email, phone, address, notes,
+    items: cart,
+    dateISO, time: selTime || '',
+    promoCode: appliedPromo ? appliedPromo.code : '',
+  };
+
+  let booking;
+  try {
+    const res = await api('/api/bookings', { method:'POST', body: JSON.stringify(body) });
+    booking = res.booking;
+  } catch (e) {
+    btn.disabled = false;
+    btn.innerHTML = 'Request booking <span class="btn-submit-arrow">→</span>';
+    toast('Booking failed: ' + e.message);
+    return;
+  }
+
+  // Also send to Formspree for email notification
+  if (FORMSPREE_URL && FORMSPREE_URL.startsWith('http')) {
+    try {
+      const itemList = booking.items.map(i => {
+        const src = (i.kind==='service'?config.services:config.packages).find(x=>x.id===i.id);
+        return src ? (src.title||src.name) : i.id;
+      }).join(', ');
+      await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers:{'Accept':'application/json','Content-Type':'application/json'},
+        body: JSON.stringify({
+          name: booking.name, email: booking.email, phone: booking.phone, address: booking.address,
+          services: itemList, date: booking.dateISO, time: booking.time,
+          promoCode: booking.promoCode, subtotal: '$'+booking.subtotal,
+          discount: '$'+booking.discount, total: '$'+booking.total,
+          notes: booking.notes, bookingRef: booking.id,
+          _subject: `New booking: ${booking.name} · ${formatMoney(booking.total)}`
+        })
+      });
+    } catch(e){ console.error('Formspree failed', e); }
+  }
+
+  // Show success
+  document.getElementById('bkLayout').style.display='none';
+  document.getElementById('successCard').classList.add('show');
+  const dateLabel = booking.dateISO ? new Date(booking.dateISO+'T12:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) : '';
+  document.getElementById('successBody').textContent = booking.dateISO
+    ? `You're set for ${dateLabel}${booking.time?' at '+booking.time:''}. Pablo will confirm within 30 minutes.`
+    : `Pablo will reach out within 30 minutes to confirm a date and time.`;
+
+  if (booking.dateISO && booking.time) {
+    const start = new Date(booking.dateISO+'T'+convert12to24(booking.time));
+    const end = new Date(start.getTime() + 90*60*1000);
+    document.getElementById('gcalBtn').href = buildGCal(booking, start, end);
+    document.getElementById('icalBtn').onclick = () => downloadICS(booking, start, end);
+  } else {
+    document.getElementById('gcalBtn').style.display='none';
+    document.getElementById('icalBtn').style.display='none';
+  }
+  window.scrollTo({top:document.getElementById('successCard').offsetTop-100,behavior:'smooth'});
+}
+
+function convert12to24(t){const m=t.match(/(\d+):(\d+)\s*(AM|PM)/i);if(!m)return '08:00';let h=parseInt(m[1]);const mn=m[2];if(m[3].toUpperCase()==='PM'&&h!==12)h+=12;if(m[3].toUpperCase()==='AM'&&h===12)h=0;return String(h).padStart(2,'0')+':'+mn}
+function buildGCal(b, start, end){
+  const fmt = d => d.toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
+  const svcNames = b.items.map(i => { const src=(i.kind==='service'?config.services:config.packages).find(x=>x.id===i.id);return src?(src.title||src.name):i.id; }).join(', ');
+  const details = `Home Photography 305 Shoot\n\nClient: ${b.name}\nServices: ${svcNames}\nTotal: ${formatMoney(b.total)}\nPhone: ${b.phone}\nNotes: ${b.notes||'(none)'}`;
+  const params = new URLSearchParams({ action:'TEMPLATE', text:`Shoot — ${b.name}`, dates:`${fmt(start)}/${fmt(end)}`, details, location: b.address });
+  return `https://calendar.google.com/calendar/render?${params.toString()}`;
+}
+function downloadICS(b, start, end){
+  const fmt = d => d.toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
+  const svcNames = b.items.map(i => { const src=(i.kind==='service'?config.services:config.packages).find(x=>x.id===i.id);return src?(src.title||src.name):i.id; }).join(', ');
+  const ics = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//HomePhotography305//EN\nBEGIN:VEVENT\nUID:${b.id}@homephotography305\nDTSTAMP:${fmt(new Date())}\nDTSTART:${fmt(start)}\nDTEND:${fmt(end)}\nSUMMARY:Shoot — ${b.name}\nDESCRIPTION:Client: ${b.name}\\nServices: ${svcNames}\\nTotal: ${formatMoney(b.total)}\\nPhone: ${b.phone}\\nNotes: ${(b.notes||'(none)').replace(/\n/g,'\\n')}\nLOCATION:${b.address}\nEND:VEVENT\nEND:VCALENDAR`;
+  const blob = new Blob([ics],{type:'text/calendar'}); const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href=url; a.download='shoot.ics'; document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+}
+
+function resetBookingForm(){
+  document.getElementById('bkForm').reset();
+  document.getElementById('bkLayout').style.display='';
+  document.getElementById('successCard').classList.remove('show');
+  document.getElementById('ordBox').classList.remove('show');
+  document.getElementById('tWrap').classList.remove('show');
+  document.getElementById('promoStatus').className='promo-status';
+  selDay=selMonth=selYear=null;selTime=null;appliedPromo=null;cart=[];
+  renderServices();renderPackages();buildCal();
+  updateCartBar();updateBookingCartDisplay();
+  document.getElementById('submitBtn').disabled=false;
+  document.getElementById('submitBtn').innerHTML='Request booking <span class="btn-submit-arrow">→</span>';
+  goto('#booking');
+}
+
+/* ═══════════════════════════════════════════
+   ADMIN
+   ═══════════════════════════════════════════ */
+function openAdmin(){document.getElementById('adminOverlay').classList.add('show');document.body.style.overflow='hidden';if(adminToken){document.getElementById('aGate').style.display='none';document.getElementById('aPanel').classList.add('show');renderAllAdmin()}}
+function closeAdmin(){document.getElementById('adminOverlay').classList.remove('show');document.body.style.overflow=''}
+
+async function aLogin() {
+  const pw = document.getElementById('aPass').value;
+  try {
+    const res = await api('/api/admin/login', { method:'POST', body: JSON.stringify({ password: pw }) });
+    adminToken = res.token;
+    sessionStorage.setItem('hp305_token', adminToken);
+    document.getElementById('aGate').style.display='none';
+    document.getElementById('aPanel').classList.add('show');
+    renderAllAdmin();
+  } catch (e) { toast(e.message || 'Login failed') }
+}
+function aOut(){adminToken=null;sessionStorage.removeItem('hp305_token');document.getElementById('aGate').style.display='block';document.getElementById('aPanel').classList.remove('show');document.getElementById('aPass').value=''}
+function aTab(t,btn){document.querySelectorAll('.a-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');['bk','av','sv','pk','pr'].forEach(x=>document.getElementById('tab-'+x).classList.add('hidden'));document.getElementById('tab-'+t).classList.remove('hidden')}
+
+async function renderAllAdmin(){
+  await refreshBookings();
+  buildAvGrid();
+  renderBlockedDates();
+  renderSvcEdit();
+  renderPkgEdit();
+  renderPromoEdit();
+}
+
+async function refreshBookings(){
+  const wrap = document.getElementById('bkTableWrap');
+  wrap.innerHTML = '<div class="loading"><div class="spinner"></div>Loading bookings…</div>';
+  try {
+    const res = await api('/api/bookings', { auth: true });
+    adminBookings = res.bookings;
+    renderBkTable();
+  } catch(e) {
+    if (e.message==='Unauthorized') { aOut(); toast('Session expired, sign in again'); return; }
+    wrap.innerHTML = '<div class="loading" style="color:var(--danger)">Failed: '+e.message+'</div>';
+  }
+}
+
+function renderBkTable(){
+  const wrap=document.getElementById('bkTableWrap');
+  if(!adminBookings.length){wrap.innerHTML='<p style="color:var(--silver-500);padding:40px;text-align:center">No bookings yet.</p>';return}
+  wrap.innerHTML = `<table class="bk-table"><thead><tr><th>Client</th><th>Services</th><th>Date & time</th><th>Total</th><th>Status</th><th>Actions</th></tr></thead><tbody>` +
+    adminBookings.map(bk => {
+      const items = bk.items.map(i => { const src=(i.kind==='service'?config.services:config.packages).find(x=>x.id===i.id);return src?(src.title||src.name):i.id; }).join(', ');
+      const dateDisplay = bk.dateISO ? new Date(bk.dateISO+'T12:00').toLocaleDateString('en-US',{month:'short',day:'numeric'}) : 'TBD';
+      return `<tr>
+        <td><div style="font-weight:500">${esc(bk.name)}</div><div style="font-size:0.7rem;color:var(--silver-500);margin-top:2px">${esc(bk.email)}</div><div style="font-size:0.7rem;color:var(--silver-500)">${esc(bk.phone)}</div></td>
+        <td style="max-width:250px">${esc(items)}${bk.promoCode?` · <span style="color:var(--success)">${esc(bk.promoCode)}</span>`:''}</td>
+        <td style="color:var(--silver-400)"><div>${dateDisplay}</div><div style="font-size:0.7rem">${esc(bk.time||'—')}</div></td>
+        <td style="font-weight:500">${formatMoney(bk.total)}</td>
+        <td><span class="badge badge-${bk.status[0]}">${bk.status}</span></td>
+        <td style="white-space:nowrap">
+          ${bk.status==='pending'?`<button class="btn-mini" onclick="updateBkStatus('${bk.id}','confirmed')">Confirm</button>`:''}
+          <button class="btn-mini secondary" onclick="openQB('${bk.id}')">QB Quote</button>
+          ${bk.status!=='cancelled'?`<button class="btn-mini secondary" onclick="updateBkStatus('${bk.id}','cancelled')">Cancel</button>`:''}
+        </td>
+      </tr>`;
+    }).join('') + '</tbody></table>';
+}
+
+async function updateBkStatus(id, status) {
+  if (status==='cancelled' && !confirm('Cancel this booking?')) return;
+  try {
+    await api('/api/bookings', { method:'PATCH', auth: true, body: JSON.stringify({ id, patch:{ status } }) });
+    toast('Booking ' + status);
+    await refreshBookings();
+  } catch(e){ toast(e.message) }
+}
+
+/* AVAILABILITY */
+const DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const TIMES=['6:00 AM','7:00 AM','8:00 AM','9:00 AM','10:00 AM','11:00 AM','12:00 PM','1:00 PM','2:00 PM','3:00 PM','4:00 PM','5:00 PM','6:00 PM','7:00 PM','8:00 PM'];
+function buildAvGrid(){
+  document.getElementById('aGrid').innerHTML=DAYS.map((d,i)=>`
+    <div class="avail-card">
+      <div class="avail-day">${d}</div>
+      <div class="tog-row"><div class="tog${config.availability[i].on?' on':''}" onclick="togDay(${i},this)"></div><span class="tog-lbl" id="tl${i}">${config.availability[i].on?'Available':'Off'}</span></div>
+      <div class="tr" id="tr${i}" style="${config.availability[i].on?'':'opacity:0.3;pointer-events:none'}">
+        <select onchange="config.availability[${i}].s=this.value">${TIMES.map(t=>`<option${t===config.availability[i].s?' selected':''}>${t}</option>`).join('')}</select>
+        <span>–</span>
+        <select onchange="config.availability[${i}].e=this.value">${TIMES.map(t=>`<option${t===config.availability[i].e?' selected':''}>${t}</option>`).join('')}</select>
+      </div>
+    </div>`).join('');
+}
+function togDay(i,el){config.availability[i].on=!config.availability[i].on;el.classList.toggle('on');document.getElementById('tl'+i).textContent=config.availability[i].on?'Available':'Off';const tr=document.getElementById('tr'+i);tr.style.opacity=config.availability[i].on?'1':'0.3';tr.style.pointerEvents=config.availability[i].on?'':'none'}
+
+function addBlockedDate(){const d=document.getElementById('blockDateInput').value;if(!d){toast('Pick a date');return}if(config.blockedDates.includes(d)){toast('Already blocked');return}config.blockedDates.push(d);config.blockedDates.sort();renderBlockedDates();document.getElementById('blockDateInput').value=''}
+function removeBlockedDate(d){config.blockedDates=config.blockedDates.filter(x=>x!==d);renderBlockedDates()}
+function renderBlockedDates(){const g=document.getElementById('blockedGrid');if(!config.blockedDates.length){g.innerHTML='<p style="grid-column:1/-1;color:var(--silver-500);font-size:0.8rem;padding:12px 0">No dates blocked.</p>';return}g.innerHTML=config.blockedDates.map(d=>{const dt=new Date(d+'T12:00');const label=dt.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});return `<div class="blocked-chip"><span>${label}</span><button class="chip-remove" onclick="removeBlockedDate('${d}')">✕</button></div>`}).join('')}
+
+/* SERVICES EDIT */
+function renderSvcEdit(){
+  document.getElementById('svcEditRows').innerHTML = config.services.map((s,i)=>`
+    <div class="edit-card">
+      <div class="edit-row cols-4">
+        <input type="text" placeholder="Title" value="${esc(s.title)}" onchange="config.services[${i}].title=this.value"/>
+        <input type="text" placeholder="Number" value="${esc(s.num)}" onchange="config.services[${i}].num=this.value"/>
+        <input type="number" placeholder="Price" value="${s.price}" onchange="config.services[${i}].price=parseInt(this.value)||0"/>
+        <input type="number" placeholder="FTC price" value="${s.ftc}" onchange="config.services[${i}].ftc=parseInt(this.value)||0"/>
+        <button class="btn-delete" onclick="deleteService(${i})">Delete</button>
+      </div>
+      <textarea style="width:100%;padding:10px 12px;background:var(--ink-900);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r-md);color:var(--silver-100);font-family:var(--font-body);font-size:var(--fs-body-sm)" placeholder="Description" onchange="config.services[${i}].desc=this.value">${esc(s.desc)}</textarea>
+    </div>`).join('');
+}
+function addService(){config.services.push({id:'svc'+Date.now(),num:String(config.services.length+1).padStart(2,'0')+' / NEW',title:'New service',desc:'Description',price:100,ftc:75});renderSvcEdit()}
+function deleteService(i){if(!confirm('Delete?'))return;config.services.splice(i,1);renderSvcEdit()}
+
+/* PACKAGES EDIT */
+function renderPkgEdit(){
+  document.getElementById('pkgEditRows').innerHTML = config.packages.map((p,i)=>`
+    <div class="edit-card">
+      <div class="edit-row cols-promo">
+        <input type="text" placeholder="Name" value="${esc(p.name)}" onchange="config.packages[${i}].name=this.value"/>
+        <input type="text" placeholder="Tag" value="${esc(p.tag)}" onchange="config.packages[${i}].tag=this.value"/>
+        <input type="number" placeholder="Price" value="${p.price}" onchange="config.packages[${i}].price=parseInt(this.value)||0"/>
+        <input type="number" placeholder="FTC price" value="${p.ftc}" onchange="config.packages[${i}].ftc=parseInt(this.value)||0"/>
+        <button class="btn-delete" onclick="deletePackage(${i})">Delete</button>
+      </div>
+      <label style="display:flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--silver-400);margin-bottom:8px"><input type="checkbox" ${p.featured?'checked':''} onchange="config.packages.forEach(x=>x.featured=false);config.packages[${i}].featured=this.checked;renderPkgEdit()"/>Featured (highlighted on site)</label>
+      <label class="fl" style="margin-bottom:6px">Included items (one per line)</label>
+      <textarea style="width:100%;padding:10px 12px;background:var(--ink-900);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r-md);color:var(--silver-100);font-family:var(--font-body);font-size:var(--fs-body-sm);min-height:80px" onchange="config.packages[${i}].items=this.value.split('\\n').filter(x=>x.trim())">${esc(p.items.join('\n'))}</textarea>
+    </div>`).join('');
+}
+function addPackage(){config.packages.push({id:'pk'+Date.now(),tag:'0'+(config.packages.length+1)+' / NEW',name:'New Package',price:500,ftc:400,featured:false,items:['Feature one','Feature two']});renderPkgEdit()}
+function deletePackage(i){if(!confirm('Delete?'))return;config.packages.splice(i,1);renderPkgEdit()}
+
+/* PROMO EDIT */
+function renderPromoEdit(){
+  document.getElementById('promoEditRows').innerHTML = config.promos.map((p,i)=>`
+    <div class="edit-card">
+      <div class="edit-row cols-promo">
+        <input type="text" placeholder="Code (e.g. FTC)" value="${esc(p.code)}" onchange="config.promos[${i}].code=this.value" style="text-transform:uppercase"/>
+        <select onchange="config.promos[${i}].type=this.value;renderPromoEdit()">
+          <option value="ftc" ${p.type==='ftc'?'selected':''}>FTC (uses FTC prices)</option>
+          <option value="percent" ${p.type==='percent'?'selected':''}>Percent off</option>
+          <option value="flat" ${p.type==='flat'?'selected':''}>Flat $ off</option>
+        </select>
+        <input type="number" placeholder="${p.type==='ftc'?'—':'Value'}" value="${p.value||''}" onchange="config.promos[${i}].value=parseInt(this.value)||0" ${p.type==='ftc'?'disabled':''}/>
+        <input type="text" placeholder="Internal note" value="${esc(p.note||'')}" onchange="config.promos[${i}].note=this.value"/>
+        <button class="btn-delete" onclick="deletePromo(${i})">Delete</button>
+      </div>
+    </div>`).join('');
+}
+function addPromo(){config.promos.push({code:'NEWCODE',type:'percent',value:10,note:''});renderPromoEdit()}
+function deletePromo(i){if(!confirm('Delete?'))return;config.promos.splice(i,1);renderPromoEdit()}
+
+/* SAVE */
+async function saveAllConfig(){
+  try {
+    await api('/api/admin/config', { method:'PUT', auth: true, body: JSON.stringify({
+      services: config.services,
+      packages: config.packages,
+      availability: config.availability,
+      blockedDates: config.blockedDates,
+      promos: config.promos,
+    })});
+    toast('Saved — live on the site now');
+    renderServices();renderPackages();buildCal();
+  } catch(e){ toast('Save failed: '+e.message) }
+}
+
+/* QB QUOTE */
+function openQB(id){
+  const b = adminBookings.find(x=>x.id===id); if(!b) return;
+  const today = new Date().toLocaleDateString('en-US');
+  const expiry = new Date(Date.now()+30*86400000).toLocaleDateString('en-US');
+  const items = b.items.map(i => { const src=(i.kind==='service'?config.services:config.packages).find(x=>x.id===i.id);return src?{ name:(src.title||src.name), price:(i.kind==='service'?src.price:src.price) }:null }).filter(Boolean);
+  const lines = items.map(i => `${i.name.padEnd(32)} $${i.price}.00`).join('\n');
+  const discountLine = b.discount ? `\nDISCOUNT (${b.promoCode})           −$${b.discount}.00` : '';
+  const tpl = `QUICKBOOKS ESTIMATE
+═══════════════════════════════════════════
+CUSTOMER:       ${b.name}
+EMAIL:          ${b.email}
+PHONE:          ${b.phone}
+PROPERTY:       ${b.address}
+
+ESTIMATE DATE:  ${today}
+EXPIRATION:     ${expiry}
+REFERENCE:      ${b.id.toUpperCase()}
+═══════════════════════════════════════════
+LINE ITEMS                       AMOUNT
+───────────────────────────────────────────
+${lines}
+───────────────────────────────────────────
+SUBTOTAL                         $${(b.subtotal||0).toLocaleString()}.00${discountLine}
+TOTAL                            $${(b.total||0).toLocaleString()}.00
+═══════════════════════════════════════════
+SCHEDULED:      ${b.dateISO||'TBD'} · ${b.time||'TBD'}
+NOTES:          ${b.notes||'(none)'}
+
+Home Photography 305
+Pablo Hernandez · Owner
+Pablo@bluecollarworkersllc.com · 305-587-6549
+
+48-hour delivery. Color-corrected.
+Payment due upon delivery of final files.`;
+  document.getElementById('qbTemplate').textContent = tpl;
+  document.getElementById('qbModal').classList.add('show');
+}
+function closeQB(){document.getElementById('qbModal').classList.remove('show')}
+function copyQB(){navigator.clipboard.writeText(document.getElementById('qbTemplate').textContent).then(()=>toast('Copied — paste into QuickBooks'))}
+
+/* LEGAL */
+const LEGAL_CONTENT = {
+  privacy:{ title:'Privacy Policy', html:`<p><strong>Effective date:</strong> April 2026</p><p>Home Photography 305 ("we") is operated by Pablo Hernandez in Miami, Florida. This policy explains what we collect, how we use it, and your rights.</p><h3>Information we collect</h3><ul><li><strong>Booking information:</strong> name, email, phone, property address, services selected, and notes.</li><li><strong>Payment information:</strong> we do not collect payment details through this website. Payments are processed separately through QuickBooks invoicing.</li><li><strong>Technical:</strong> basic browser/device data. No third-party tracking or advertising cookies.</li></ul><h3>How we use it</h3><ul><li>Respond to bookings, schedule shoots, deliver services.</li><li>Communicate with you about your booking.</li><li>Issue invoices and maintain business records as required by law.</li></ul><h3>Storage</h3><p>Booking data is stored on Cloudflare's secure infrastructure. We do not sell, rent, or share your information with third parties for marketing purposes.</p><h3>Your rights</h3><ul><li><strong>Access, correction, deletion:</strong> email <a href="mailto:Pablo@bluecollarworkersllc.com" style="color:var(--silver-100)">Pablo@bluecollarworkersllc.com</a></li></ul><h3>Children</h3><p>This website is not directed at children under 18.</p><h3>Contact</h3><p>Home Photography 305 · Pablo Hernandez<br/>Miami, FL · 305-587-6549<br/>Pablo@bluecollarworkersllc.com</p>` },
+  terms:{ title:'Terms of Service', html:`<p><strong>Effective date:</strong> April 2026</p><p>By booking with Home Photography 305, you agree to these terms.</p><h3>1. Services</h3><p>Real estate photography, drone video, 3D render overlays, and related media services in South Florida.</p><h3>2. Booking confirmation</h3><p>Submitting the booking form does not guarantee a slot. Bookings are confirmed when we respond by email or phone, typically within 30 minutes during business hours.</p><h3>3. Payment</h3><p>Due upon delivery of final files. Bank transfer, Zelle, or other methods listed on the invoice. Issued via QuickBooks.</p><h3>4. Cancellation</h3><ul><li>24+ hours before: free.</li><li>Within 24 hours: may incur a 50% cancellation fee.</li><li>Weather rescheduling: free and mutual.</li></ul><h3>5. Delivery</h3><p>Standard 48 hours from shoot date. Via secure download link.</p><h3>6. Image rights</h3><ul><li>Upon full payment, you receive a royalty-free license to use delivered media for marketing the subject property and your professional portfolio.</li><li>Home Photography 305 retains copyright and may use images in our portfolio/social unless agreed otherwise in writing.</li></ul><h3>7. Drone operations</h3><p>All flights under FAA Part 107. Subject to airspace, weather, property-owner permission.</p><h3>8. Liability</h3><p>Commercial drone liability insurance maintained. Total liability limited to amount paid for the shoot. Not liable for lost listing opportunities or consequential damages.</p><h3>9. Promo codes</h3><p>One code per booking. Not combinable. Subject to terms of each code.</p><h3>10. Governing law</h3><p>Florida law. Disputes resolved in Miami-Dade County courts.</p>` }
+};
+function openLegal(which){document.getElementById('legalTitle').textContent=LEGAL_CONTENT[which].title;document.getElementById('legalContent').innerHTML=LEGAL_CONTENT[which].html;document.getElementById('legalOverlay').classList.add('show');document.body.style.overflow='hidden'}
+function closeLegal(){document.getElementById('legalOverlay').classList.remove('show');document.body.style.overflow=''}
+
+/* INIT */
+loadConfig();
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.shiftKey&&e.key.toLowerCase()==='a'){e.preventDefault();openAdmin()}});
+</script>
+</body>
+</html>
