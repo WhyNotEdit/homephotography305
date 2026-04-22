@@ -392,6 +392,53 @@ footer{background:var(--ink-900);padding:var(--sp-xxl) var(--gutter) var(--sp-lg
   .hero-meta{display:block}
   .hero-p{margin-bottom:var(--sp-lg)}
 }
+
+/* PORTFOLIO LIGHTBOX */
+.portfolio-lb{position:fixed;inset:0;background:rgba(10,10,10,0.97);z-index:9000;overflow-y:auto;display:none;flex-direction:column}
+.portfolio-lb.show{display:flex}
+.lb-header{display:flex;justify-content:space-between;align-items:flex-start;padding:var(--sp-lg) var(--gutter);border-bottom:1px solid rgba(255,255,255,0.07);flex-shrink:0;background:var(--ink-900)}
+.lb-tag{font-size:var(--fs-label);letter-spacing:0.22em;text-transform:uppercase;color:var(--silver-500);margin-bottom:6px}
+.lb-title{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.5rem);font-weight:500;color:var(--silver-100);letter-spacing:-0.02em}
+.lb-loc{font-size:var(--fs-body);color:var(--silver-400);margin-top:4px}
+.lb-close{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:var(--silver-100);width:48px;height:48px;border-radius:50%;cursor:pointer;font-size:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:all var(--dur) var(--ease)}
+.lb-close:hover{background:var(--silver-100);color:var(--ink-900)}
+.lb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:3px;padding:3px;flex:1}
+.lb-photo{position:relative;aspect-ratio:4/3;overflow:hidden;cursor:pointer;background:var(--ink-700)}
+.lb-photo img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s var(--ease)}
+.lb-photo:hover img{transform:scale(1.04)}
+.lb-photo-overlay{position:absolute;inset:0;background:rgba(10,10,10,0);transition:background 0.3s;display:flex;align-items:center;justify-content:center}
+.lb-photo:hover .lb-photo-overlay{background:rgba(10,10,10,0.3)}
+.lb-zoom-icon{color:white;font-size:28px;opacity:0;transition:opacity 0.3s}
+.lb-photo:hover .lb-zoom-icon{opacity:1}
+.lb-empty{grid-column:1/-1;text-align:center;padding:var(--sp-xxl);color:var(--silver-500)}
+/* FULLSCREEN */
+.lb-fs{position:fixed;inset:0;background:rgba(0,0,0,0.97);z-index:9100;display:none;align-items:center;justify-content:center}
+.lb-fs.show{display:flex}
+.lb-fs-img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:var(--r-md)}
+.lb-fs-close{position:fixed;top:20px;right:20px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:var(--silver-100);width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:18px;z-index:10}
+.lb-fs-close:hover{background:var(--silver-100);color:var(--ink-900)}
+.lb-arrow{position:fixed;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:var(--silver-100);width:52px;height:52px;border-radius:50%;cursor:pointer;font-size:26px;display:flex;align-items:center;justify-content:center;transition:all var(--dur) var(--ease);z-index:10}
+.lb-prev{left:20px}
+.lb-next{right:20px}
+.lb-arrow:hover{background:var(--silver-100);color:var(--ink-900)}
+.lb-fs-counter{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);color:var(--silver-400);font-size:var(--fs-body-sm);letter-spacing:0.1em}
+/* no-shoots placeholder */
+.mosaic-placeholder{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:var(--sp-xxl);text-align:center;border:1px dashed rgba(255,255,255,0.1);border-radius:var(--r-md);gap:var(--sp-md)}
+.mosaic-placeholder p{color:var(--silver-500);font-size:var(--fs-body)}
+/* ADMIN PHOTO TAB */
+.shoot-card{background:var(--ink-800);border:1px solid rgba(255,255,255,0.06);border-radius:var(--r-md);padding:var(--sp-md);margin-bottom:var(--sp-md)}
+.shoot-card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-md);flex-wrap:wrap;gap:8px}
+.shoot-card-name{font-family:var(--font-display);font-size:1.1rem;font-weight:500;color:var(--silver-100)}
+.shoot-cover{width:120px;height:80px;object-fit:cover;border-radius:var(--r-md);border:1px solid rgba(255,255,255,0.08)}
+.shoot-cover-placeholder{width:120px;height:80px;background:var(--ink-700);border-radius:var(--r-md);border:1px dashed rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--silver-500);text-align:center;padding:8px}
+.shoot-photos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:6px;margin-top:var(--sp-sm)}
+.shoot-photo-thumb{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:var(--r-md)}
+.shoot-photo-thumb img{width:100%;height:100%;object-fit:cover}
+.thumb-del{position:absolute;top:4px;right:4px;background:rgba(239,68,68,0.85);border:none;color:white;width:20px;height:20px;border-radius:50%;cursor:pointer;font-size:11px;display:flex;align-items:center;justify-content:center}
+.upload-zone{border:2px dashed rgba(255,255,255,0.15);border-radius:var(--r-md);padding:var(--sp-lg);text-align:center;cursor:pointer;transition:all var(--dur) var(--ease);color:var(--silver-400);font-size:var(--fs-body-sm)}
+.upload-zone:hover{border-color:var(--silver-100);color:var(--silver-100);background:rgba(255,255,255,0.03)}
+.upload-zone input{display:none}
+.upload-progress{font-size:0.75rem;color:var(--silver-400);margin-top:6px;display:none}
 </style>
 </head>
 <body>
@@ -466,16 +513,32 @@ footer{background:var(--ink-900);padding:var(--sp-xxl) var(--gutter) var(--sp-lg
 <section class="section" id="portfolio">
   <div class="section-header">
     <div><div class="eyebrow">Portfolio</div><h2 class="display">Recent<br><span class="italic">work.</span></h2></div>
-    <p class="header-right">Selected properties from across South Florida — from waterfront estates to new developments.</p>
+    <p class="header-right">Click any property to view the full gallery from that shoot.</p>
   </div>
-  <div class="mosaic">
-    <div class="m-item big m-bg-1"><div class="m-bg"><svg class="m-icon" width="80" height="68" viewBox="0 0 32 26" fill="none"><rect x="1" y="7" width="30" height="17" rx="3" fill="#fafafa"/><circle cx="16" cy="15.5" r="4.5" fill="none" stroke="#0a0a0a" stroke-width="1.5"/></svg></div><div class="m-info"><div class="m-tag">Drone Aerial</div><div class="m-loc">Coral Gables Estate</div></div></div>
-    <div class="m-item med m-bg-2"><div class="m-bg"><svg class="m-icon" width="64" height="56" viewBox="0 0 32 26" fill="none"><rect x="1" y="7" width="30" height="17" rx="3" fill="#fafafa"/><circle cx="16" cy="15.5" r="4.5" fill="none" stroke="#0a0a0a" stroke-width="1.5"/></svg></div><div class="m-info"><div class="m-tag">Interior</div><div class="m-loc">Brickell Penthouse</div></div></div>
-    <div class="m-item sm m-bg-3"><div class="m-bg"><svg class="m-icon" width="48" height="42" viewBox="0 0 32 26" fill="none"><rect x="1" y="7" width="30" height="17" rx="3" fill="#fafafa"/><circle cx="16" cy="15.5" r="4.5" fill="none" stroke="#0a0a0a" stroke-width="1.5"/></svg></div><div class="m-info"><div class="m-tag">FPV Video</div><div class="m-loc">Pinecrest Home</div></div></div>
-    <div class="m-item sm m-bg-4"><div class="m-bg"><svg class="m-icon" width="48" height="42" viewBox="0 0 32 26" fill="none"><rect x="1" y="7" width="30" height="17" rx="3" fill="#fafafa"/><circle cx="16" cy="15.5" r="4.5" fill="none" stroke="#0a0a0a" stroke-width="1.5"/></svg></div><div class="m-info"><div class="m-tag">3D Render</div><div class="m-loc">Aventura Development</div></div></div>
-    <div class="m-item sm m-bg-5"><div class="m-bg"><svg class="m-icon" width="48" height="42" viewBox="0 0 32 26" fill="none"><rect x="1" y="7" width="30" height="17" rx="3" fill="#fafafa"/><circle cx="16" cy="15.5" r="4.5" fill="none" stroke="#0a0a0a" stroke-width="1.5"/></svg></div><div class="m-info"><div class="m-tag">Agent Video</div><div class="m-loc">Kendall Luxury Home</div></div></div>
-  </div>
+  <div class="mosaic" id="portfolioMosaic"><div class="loading" style="grid-column:1/-1"><div class="spinner"></div>Loading portfolio…</div></div>
 </section>
+
+<!-- PORTFOLIO LIGHTBOX -->
+<div class="portfolio-lb" id="portfolioLB">
+  <div class="lb-header">
+    <div>
+      <div class="lb-tag" id="lbTag"></div>
+      <div class="lb-title" id="lbTitle"></div>
+      <div class="lb-loc" id="lbLoc"></div>
+    </div>
+    <button class="lb-close" onclick="closeLB()">✕</button>
+  </div>
+  <div class="lb-grid" id="lbGrid"></div>
+  <div class="lb-fs" id="lbFs">
+    <button class="lb-fs-close" onclick="closeFS()">✕</button>
+    <button class="lb-arrow lb-prev" onclick="fsNav(-1)">‹</button>
+    <img class="lb-fs-img" id="lbFsImg" src="" alt=""/>
+    <button class="lb-arrow lb-next" onclick="fsNav(1)">›</button>
+    <div class="lb-fs-counter" id="lbFsCounter"></div>
+  </div>
+</div>
+
+
 
 <section class="section-full process-section">
   <div style="max-width:var(--max-w);margin:0 auto;padding:0 var(--gutter)">
@@ -613,6 +676,7 @@ footer{background:var(--ink-900);padding:var(--sp-xxl) var(--gutter) var(--sp-lg
         <button class="a-tab" onclick="aTab('sv',this)">Services</button>
         <button class="a-tab" onclick="aTab('pk',this)">Packages</button>
         <button class="a-tab" onclick="aTab('pr',this)">Promo Codes</button>
+        <button class="a-tab" onclick="aTab('ph',this)">Photos</button>
       </div>
 
       <div id="tab-bk">
@@ -638,6 +702,12 @@ footer{background:var(--ink-900);padding:var(--sp-xxl) var(--gutter) var(--sp-lg
         <p style="font-size:var(--fs-body);color:var(--silver-400);margin-bottom:var(--sp-md)">Each package has a price and an FTC price. Items = one per line.</p>
         <div id="pkgEditRows"></div>
         <button class="btn-add" onclick="addPackage()">+ Add new package</button>
+      </div>
+
+      <div id="tab-ph" class="hidden">
+        <div class="admin-section-head"><h4>Portfolio shoots</h4><button onclick="createShoot()" class="btn-mini">+ New shoot</button></div>
+        <p style="font-size:var(--fs-body);color:var(--silver-400);margin-bottom:var(--sp-lg)">Each shoot appears as a tile in your portfolio mosaic. Upload a cover photo and gallery photos. Visitors click the cover to see all photos in a lightbox.</p>
+        <div id="shootsList"></div>
       </div>
       <div id="tab-pr" class="hidden">
         <div class="admin-section-head"><h4>Promo codes</h4><button onclick="saveAllConfig()" class="btn-mini">Save changes</button></div>
@@ -1011,7 +1081,7 @@ async function aLogin() {
   } catch (e) { toast(e.message || 'Login failed') }
 }
 function aOut(){adminToken=null;sessionStorage.removeItem('hp305_token');document.getElementById('aGate').style.display='block';document.getElementById('aPanel').classList.remove('show');document.getElementById('aPass').value=''}
-function aTab(t,btn){document.querySelectorAll('.a-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');['bk','av','sv','pk','pr'].forEach(x=>document.getElementById('tab-'+x).classList.add('hidden'));document.getElementById('tab-'+t).classList.remove('hidden')}
+function aTab(t,btn){document.querySelectorAll('.a-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');['bk','av','sv','pk','pr','ph'].forEach(x=>document.getElementById('tab-'+x).classList.add('hidden'));document.getElementById('tab-'+t).classList.remove('hidden')}
 
 async function renderAllAdmin(){
   await refreshBookings();
@@ -1020,6 +1090,7 @@ async function renderAllAdmin(){
   renderSvcEdit();
   renderPkgEdit();
   renderPromoEdit();
+  renderShootsList();
 }
 
 async function refreshBookings(){
@@ -1207,8 +1278,225 @@ const LEGAL_CONTENT = {
 function openLegal(which){document.getElementById('legalTitle').textContent=LEGAL_CONTENT[which].title;document.getElementById('legalContent').innerHTML=LEGAL_CONTENT[which].html;document.getElementById('legalOverlay').classList.add('show');document.body.style.overflow='hidden'}
 function closeLegal(){document.getElementById('legalOverlay').classList.remove('show');document.body.style.overflow=''}
 
+
+/* ═══════════════════════════════════════════
+   PORTFOLIO — load shoots & render mosaic
+   ═══════════════════════════════════════════ */
+let shoots = [];
+const MOSAIC_CLASSES = ['big m-bg-1','med m-bg-2','sm m-bg-3','sm m-bg-4','sm m-bg-5'];
+
+async function loadShoots(){
+  const mosaic = document.getElementById('portfolioMosaic');
+  try {
+    const res = await api('/api/photos');
+    shoots = res.shoots || [];
+    renderMosaic();
+  } catch(e){
+    mosaic.innerHTML = '<div class="mosaic-placeholder"><p>Portfolio coming soon.</p></div>';
+  }
+}
+
+function renderMosaic(){
+  const mosaic = document.getElementById('portfolioMosaic');
+  if(!shoots.length){
+    mosaic.innerHTML = '<div class="mosaic-placeholder"><p>Portfolio coming soon — check back after we upload some shoots!</p></div>';
+    return;
+  }
+  mosaic.innerHTML = shoots.slice(0,5).map((s,i) => {
+    const cls = MOSAIC_CLASSES[i % MOSAIC_CLASSES.length];
+    const bg = s.coverUrl ? `style="background-image:url('${esc(s.coverUrl)}');background-size:cover;background-position:center"` : '';
+    return `<div class="m-item ${cls}" onclick="openLB('${s.id}')" ${bg}>
+      ${!s.coverUrl ? '<div class="m-bg"><svg class="m-icon" width="64" height="56" viewBox="0 0 32 26" fill="none"><rect x="1" y="7" width="30" height="17" rx="3" fill="#fafafa"/><circle cx="16" cy="15.5" r="4.5" fill="none" stroke="#0a0a0a" stroke-width="1.5"/></svg></div>' : ''}
+      <div class="m-info"><div class="m-tag">${esc(s.tag)}</div><div class="m-loc">${esc(s.name)}${s.location?' · '+esc(s.location):''}</div></div>
+    </div>`;
+  }).join('');
+}
+
+/* ═══════════════════════════════════════════
+   LIGHTBOX
+   ═══════════════════════════════════════════ */
+let lbShoot = null, fsPhotos = [], fsIdx = 0;
+
+function openLB(shootId){
+  lbShoot = shoots.find(s => s.id === shootId);
+  if(!lbShoot) return;
+  document.getElementById('lbTag').textContent = lbShoot.tag || '';
+  document.getElementById('lbTitle').textContent = lbShoot.name || '';
+  document.getElementById('lbLoc').textContent = lbShoot.location || '';
+  const photos = lbShoot.photos || [];
+  const grid = document.getElementById('lbGrid');
+  if(!photos.length){
+    grid.innerHTML = '<div class="lb-empty">No photos uploaded for this shoot yet.</div>';
+  } else {
+    fsPhotos = photos.map(p => p.url || p);
+    grid.innerHTML = photos.map((p,i) => {
+      const url = p.url || p;
+      return `<div class="lb-photo" onclick="openFS(${i})">
+        <img src="${esc(url)}" alt="Photo ${i+1}" loading="lazy"/>
+        <div class="lb-photo-overlay"><span class="lb-zoom-icon">⊕</span></div>
+      </div>`;
+    }).join('');
+  }
+  document.getElementById('portfolioLB').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLB(){
+  document.getElementById('portfolioLB').classList.remove('show');
+  document.body.style.overflow = '';
+  closeFS();
+}
+
+function openFS(idx){
+  fsIdx = idx;
+  document.getElementById('lbFs').classList.add('show');
+  renderFS();
+}
+function closeFS(){document.getElementById('lbFs').classList.remove('show')}
+function renderFS(){
+  document.getElementById('lbFsImg').src = fsPhotos[fsIdx] || '';
+  document.getElementById('lbFsCounter').textContent = (fsIdx+1)+' / '+fsPhotos.length;
+}
+function fsNav(dir){
+  fsIdx = (fsIdx + dir + fsPhotos.length) % fsPhotos.length;
+  renderFS();
+}
+
+// keyboard nav
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape'){ closeFS(); closeLB(); }
+  if(document.getElementById('lbFs').classList.contains('show')){
+    if(e.key === 'ArrowLeft') fsNav(-1);
+    if(e.key === 'ArrowRight') fsNav(1);
+  }
+});
+
+/* ═══════════════════════════════════════════
+   ADMIN — PHOTOS TAB
+   ═══════════════════════════════════════════ */
+async function createShoot(){
+  const name = prompt('Property / shoot name (e.g. "Coral Gables Estate"):');
+  if(!name) return;
+  const location = prompt('Location (e.g. "Coral Gables, FL") — optional:') || '';
+  const tag = prompt('Tag (e.g. "Drone Aerial", "Interior", "FPV Video") — optional:') || 'Portfolio';
+  try {
+    const res = await api('/api/photos/shoot', { method:'POST', auth:true, body: JSON.stringify({name,location,tag}) });
+    shoots.unshift(res.shoot);
+    renderMosaic();
+    renderShootsList();
+    toast('Shoot created — now upload a cover photo and gallery photos');
+  } catch(e){ toast('Error: '+e.message) }
+}
+
+function renderShootsList(){
+  const wrap = document.getElementById('shootsList');
+  if(!wrap) return;
+  if(!shoots.length){ wrap.innerHTML = '<p style="color:var(--silver-500);padding:var(--sp-lg) 0">No shoots yet — click "+ New shoot" to add your first property.</p>'; return; }
+  wrap.innerHTML = shoots.map(s => {
+    const photos = s.photos || [];
+    return `<div class="shoot-card" id="sc-${s.id}">
+      <div class="shoot-card-header">
+        <div>
+          <div class="shoot-card-name">${esc(s.name)}</div>
+          <div style="font-size:0.8rem;color:var(--silver-500);margin-top:2px">${esc(s.tag)}${s.location?' · '+esc(s.location):''}</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+          ${s.coverUrl ? `<img class="shoot-cover" src="${esc(s.coverUrl)}" alt="cover"/>` : '<div class="shoot-cover-placeholder">No cover yet</div>'}
+          <button class="btn-mini secondary" onclick="uploadCover('${s.id}')">Set cover</button>
+          <button class="btn-mini secondary" onclick="uploadPhotos('${s.id}')">Add photos</button>
+          <button class="btn-mini secondary" onclick="editShoot('${s.id}')">Edit</button>
+          <button class="btn-mini secondary" style="color:var(--danger);border-color:rgba(239,68,68,0.3)" onclick="deleteShoot('${s.id}')">Delete</button>
+        </div>
+      </div>
+      <div class="upload-progress" id="up-${s.id}"></div>
+      ${photos.length ? `<div class="shoot-photos-grid">${photos.map(p=>`<div class="shoot-photo-thumb"><img src="${esc(p.url||p)}" loading="lazy"/><button class="thumb-del" onclick="deletePhoto('${s.id}','${esc(p.key||p)}')">✕</button></div>`).join('')}</div>` : '<p style="font-size:0.8rem;color:var(--silver-500);margin-top:8px">No gallery photos yet.</p>'}
+    </div>`;
+  }).join('');
+}
+
+function uploadCover(sid){
+  const input = document.createElement('input');
+  input.type='file';input.accept='image/*';
+  input.onchange = async () => {
+    const file = input.files[0]; if(!file) return;
+    await uploadImage(sid, file, true);
+  };
+  input.click();
+}
+
+function uploadPhotos(sid){
+  const input = document.createElement('input');
+  input.type='file';input.accept='image/*';input.multiple=true;
+  input.onchange = async () => {
+    const files = [...input.files]; if(!files.length) return;
+    const prog = document.getElementById('up-'+sid);
+    if(prog){ prog.style.display='block'; prog.textContent='Uploading 0 of '+files.length+'…'; }
+    for(let i=0;i<files.length;i++){
+      if(prog) prog.textContent = 'Uploading '+(i+1)+' of '+files.length+'…';
+      await uploadImage(sid, files[i], false);
+    }
+    if(prog){ prog.textContent='Done!'; setTimeout(()=>{prog.style.display='none'},2000); }
+    toast('All photos uploaded');
+  };
+  input.click();
+}
+
+async function uploadImage(sid, file, isCover){
+  try {
+    const url = API_BASE+'/api/photos/upload/'+sid+(isCover?'?cover=1':'');
+    const res = await fetch(url, {
+      method:'POST',
+      headers:{'Authorization':'Bearer '+adminToken,'Content-Type':file.type},
+      body: file
+    });
+    const data = await res.json();
+    if(!data.ok) throw new Error(data.error||'Upload failed');
+    // update local shoots
+    const idx = shoots.findIndex(s=>s.id===sid);
+    if(idx>=0){
+      if(isCover){ shoots[idx].cover=data.key; shoots[idx].coverUrl=data.url; }
+      else { if(!shoots[idx].photos) shoots[idx].photos=[]; shoots[idx].photos.push({key:data.key,url:data.url}); }
+    }
+    renderMosaic();
+    renderShootsList();
+  } catch(e){ toast('Upload error: '+e.message) }
+}
+
+async function deletePhoto(sid, key){
+  if(!confirm('Delete this photo?')) return;
+  try {
+    await api('/api/photos/img', { method:'DELETE', auth:true, body: JSON.stringify({shootId:sid,key}) });
+    const idx = shoots.findIndex(s=>s.id===sid);
+    if(idx>=0){ shoots[idx].photos=(shoots[idx].photos||[]).filter(p=>(p.key||p)!==key); if(shoots[idx].cover===key){shoots[idx].cover='';shoots[idx].coverUrl='';} }
+    renderMosaic(); renderShootsList(); toast('Photo deleted');
+  } catch(e){ toast('Error: '+e.message) }
+}
+
+async function deleteShoot(sid){
+  if(!confirm('Delete this entire shoot and all its photos?')) return;
+  try {
+    await api('/api/photos/shoot/'+sid, { method:'DELETE', auth:true });
+    shoots = shoots.filter(s=>s.id!==sid);
+    renderMosaic(); renderShootsList(); toast('Shoot deleted');
+  } catch(e){ toast('Error: '+e.message) }
+}
+
+async function editShoot(sid){
+  const s = shoots.find(x=>x.id===sid); if(!s) return;
+  const name = prompt('Name:', s.name); if(!name) return;
+  const location = prompt('Location:', s.location||'');
+  const tag = prompt('Tag:', s.tag||'Portfolio');
+  try {
+    await api('/api/photos/shoot/'+sid, { method:'PATCH', auth:true, body: JSON.stringify({name,location,tag}) });
+    const idx = shoots.findIndex(x=>x.id===sid);
+    if(idx>=0) shoots[idx]={...shoots[idx],name,location,tag};
+    renderMosaic(); renderShootsList(); toast('Shoot updated');
+  } catch(e){ toast('Error: '+e.message) }
+}
+
 /* INIT */
 loadConfig();
+loadShoots();
 document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.shiftKey&&e.key.toLowerCase()==='a'){e.preventDefault();openAdmin()}});
 </script>
 </body>
